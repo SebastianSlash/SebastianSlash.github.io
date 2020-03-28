@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Jekyll on GitHub? Easy!"
 date: 2019-07-05
 ---
