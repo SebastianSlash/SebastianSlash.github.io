@@ -3,14 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{{ page.title }}</title>
+		<link rel="stylesheet" href="/assets/css/styles.css">
+		{% seo %}
 	</head>
 	<body>
-		<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
+		{% include navigation.html %}
 		<div class="">
 			{{ content }}
 		</div>

@@ -1,3 +1,28 @@
 name: sebastian, whatever
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+
+collections:
+  blogtype:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "blogtype"
+    values:
+      layout: "bloghome"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag

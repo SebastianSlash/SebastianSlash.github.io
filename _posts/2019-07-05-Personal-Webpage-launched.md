@@ -1,7 +1,9 @@
 ---
-layout: posts
+layout: post
+blogtype: personal
 title: "Jekyll on GitHub? Easy!"
 date: 2019-07-05
+author: Sebastian Bellitto
 ---
 
 Hello there!

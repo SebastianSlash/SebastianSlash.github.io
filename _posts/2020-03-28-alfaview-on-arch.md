@@ -1,5 +1,6 @@
 ---
-layout: posts
+layout: post
+blogtype: tech
 title: "Installing Alfaview on Arch Linux"
 date: 2020-03-28
 author: Sebastian Bellitto
@@ -15,8 +16,8 @@ to run on Arch. <br>
 Here is our checklist:<br>
 
   1.  [Tool for converting .deb packages](#step-one)
-  2.  [Making Arch package and adjust dependencies](#step-one)
-  3.  [Updates](#step-one)
+  2.  [Making Arch package and adjust dependencies](#step-two)
+  3.  [Updates](#step-three)
 
 <br>
 

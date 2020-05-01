@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<!-- <h1 id="article-title">{{ page.title }}</h1>
+<p class="meta">{{ page.date | date_to_string }} | {{ page.author }}</p> -->
+
+<p>
+  {{ page.date | date_to_string }} | {{ page.author }}
+  {% assign blog = site.blogtype | where: 'b_type', page.blogtype | first %}
+  {% if blog %}
+    - <a href="{{ blog.url }}">{{ blog.blog_name }}</a>
+  {% endif %}
+</p>
+
+<div class="post">
+  {{ content }}
+</div>
+<div>
+  <a href="#article-title">back to top</a>
+</div>
