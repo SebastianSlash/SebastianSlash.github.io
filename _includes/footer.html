@@ -1,0 +1,10 @@
+<footer>
+  <div class="sitemap">
+    {% include navigation.html %}
+    <ul>
+    {% for item in site.data.foot_about %}
+      <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+</footer>

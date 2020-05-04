@@ -1,6 +1,6 @@
 - name: Home
   link: /
-- name: Blog
-  link: /blog/
+- name: Podcast
+  link: /pages/podcast.html
 - name: My Blogs
   link: /blogs.html
