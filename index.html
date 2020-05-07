@@ -7,63 +7,78 @@ title: My Personal Webpage
   Just kinda playing around to see how jekyll works on GitHub.
 </p> -->
 
-<div class="o_landing">
-  {% include navigation.html %}
-  <div class="logo">
-    {% include icons/name_logo.html %}
+<div class="o_content">
+  <div class="o_landing">
+    {% include navigation.html %}
+    <div class="logo">
+      {% include icons/name_logo.html %}
+    </div>
+    <p class="ticker">thinking. creating. exploring.</p>
+    <p>Those are some of the things I like to do whenever I can. </p>
   </div>
-  <p class="ticker">thinking. creating. exploring.</p>
-  <p>Those are some of the things I like to do whenever I can. </p>
-</div>
 
-<div class="o_projects">
-  <h1>Projects</h1>
-  <p>
-    I'm also working on some projects, mostly tech related and mainly coding.
-    I just dont have time to get them all done.
-  </p>
-  <p class="ticker">So many Ideas!</p>
-  <a href="https://github.com/SebastianSlash" class="call_action">see on GitHub</a>
-</div>
-
-<div class="o_impossible">
-  <h1>Impossible List</h1>
-  <p class="ticker">The Bucket List 2.0 - Evolved</p>
-  <p>I got inspired to create this by Thomas Frank from <a href="https://collegeinfogeek.com">College Info Geek</a>.
-  <br>it's basicly a list of goals I want to achive and beyond.</p>
-  <a href="pages/impossibble-list.html" class="call_action">Go check it out!</a>
-</div>
-
-<div class="o_podcast">
-  <h1>The Podcast</h1>
-  <p class="ticker">I think best when cycling.</p>
-  <p>So I thought: "Why not think loudly and record it for you?".
-  <br>That's how the Idea of a Bikepacking - Cycling Adventure Podcast came to life.</p>
-  <a href="pages/podcast.html" class="call_action">Join me!</a>
-  <p>On my rides all over the place and even learn a thing or two.</p>
-</div>
-
-<div class="o_blog">
-  <div id="blog_adventure">
-    <h1>Adventure Blog</h1>
-    <p class="ticker">Adventures beyond the Podcast</p>
-    <p>Everything I want to talk about but don't do in the Podcast, I'll do here.</p>
-    <a href="" class="call_action">See what I've been up to</a>
-  </div>
-  <div id="blog_tech">
-    <h1>Tech Blog</h1>
-    <p class="ticker">How I do stuff.</p>
+  <div class="o_projects">
+    <h1>Projects</h1>
     <p>
-      All I'm doing here is write down how I do things so I can look it up when I forget.
-      And If I can help someone else out with it, Bonus!
+      I'm also working on some projects, mostly tech related and mainly coding.
+      I just dont have time to get them all done.
     </p>
-    <a href="" class="call_action">get technical</a>
+    <p class="ticker">So many Ideas!</p>
+    <a href="https://github.com/SebastianSlash" class="call_action">see on GitHub</a>
   </div>
-</div>
 
-<div class="o_contact">
-  <h1>Contact</h1>
-  <div>
-    <p>Put your email address here</p>
+  <div class="o_impossible">
+    <h1>Impossible List</h1>
+    <p class="ticker">The Bucket List 2.0 - Evolved</p>
+    <p>I got inspired to create this by Thomas Frank from <a href="https://collegeinfogeek.com">College Info Geek</a>.
+    <br>it's basicly a list of goals I want to achive and beyond.</p>
+    <a href="pages/impossibble-list.html" class="call_action">Go check it out!</a>
+  </div>
+
+  <div class="o_podcast">
+    <h1>The Podcast</h1>
+    <p class="ticker">I think best when cycling.</p>
+    <p>So I thought: "Why not think loudly and record it for you?".
+    <br>That's how the Idea of a Bikepacking - Cycling Adventure Podcast came to life.</p>
+    <a href="pages/podcast.html" class="call_action">Join me!</a>
+    <p>On my rides all over the place and even learn a thing or two.</p>
+  </div>
+
+  <!-- Probably will delete this, since the other way is more modular. -->
+  <!-- <div class="o_blog">
+    <div id="blog_adventure">
+      <h1>Adventure Blog</h1>
+      <p class="ticker">Adventures beyond the Podcast</p>
+      <p>Everything I want to talk about but don't do in the Podcast, I'll do here.</p>
+      <a href="" class="call_action">See what I've been up to</a>
+    </div>
+    <div id="blog_tech">
+      <h1>Tech Blog</h1>
+      <p class="ticker">How I do stuff.</p>
+      <p>
+        All I'm doing here is write down how I do things so I can look it up when I forget.
+        And If I can help someone else out with it, Bonus!
+      </p>
+      <a href="" class="call_action">get technical</a>
+    </div>
+  </div> -->
+
+  <div class="o_blog">
+    <h1>Sometimes I'm Writing</h1>
+    {% for blog in site.blogtype %}
+    <div id="{{ blog.css_id }}">
+      <h1>{{ blog.blog_name }}</h1>
+      <p class="ticker">{{ blog.ticker_txt }}</p>
+      <p>{{ blog.content | markdownify }}</p>
+      <a href="{{ blog.url }}" class="call_action">{{ blog.call_to_action }}</a>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="o_contact">
+    <h1>Contact</h1>
+    <div>
+      <p>Put your email address here</p>
+    </div>
   </div>
 </div>
