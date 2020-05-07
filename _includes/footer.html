@@ -1,10 +1,23 @@
 <footer>
   <div class="sitemap">
-    {% include navigation.html %}
-    <ul>
-    {% for item in site.data.foot_about %}
-      <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+
+      <div class="logo">
+        <a href="/">
+        {% include icons/name_logo.html %}
+        </a>
+      </div>
+
+    {% for section in site.data.foot_about.sections %}
+    <div class={{ section.title }}>
+      <ul>
+
+        <p>{{ section.title }}</p>
+        {% for item in section.map_items %}
+        <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+        {% endfor %}
+
+      </ul>
+    </div>
     {% endfor %}
-    </ul>
   </div>
 </footer>

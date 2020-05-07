@@ -1,6 +1,21 @@
-- name: contact
-  link:
-- name: privacy policy
-  link:
-- name: imprint
-  link:
+sections:
+  - title: About
+    map_items:
+      - name: contact
+        link: /pages/contact
+      - name: privacy policy
+        link:
+      - name: imprint
+        link:
+  - title: Content
+    map_items:
+      - name: Adventure Blog
+        link: /blogtype/adventure
+      - name: Tech Blog
+        link: /blogtype/tech
+      - name: Podcast
+        link: /pages/podcast
+      - name: Impossible List
+        link: /pages/impossible-list
+      - name: Projects
+        link: /pages/projects

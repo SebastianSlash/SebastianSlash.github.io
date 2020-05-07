@@ -24,13 +24,13 @@ title: My Personal Webpage
       I just dont have time to get them all done.
     </p>
     <p class="ticker">So many Ideas!</p>
-    <a href="https://github.com/SebastianSlash" class="call_action">see on GitHub</a>
+    <a href="https://github.com/SebastianSlash" class="call_action" target="_blank">see on GitHub</a>
   </div>
 
   <div class="o_impossible">
     <h1>Impossible List</h1>
     <p class="ticker">The Bucket List 2.0 - Evolved</p>
-    <p>I got inspired to create this by Thomas Frank from <a href="https://collegeinfogeek.com">College Info Geek</a>.
+    <p>I got inspired to create this by Thomas Frank from <a href="https://collegeinfogeek.com" target="_blank">College Info Geek</a>.
     <br>it's basicly a list of goals I want to achive and beyond.</p>
     <a href="pages/impossibble-list.html" class="call_action">Go check it out!</a>
   </div>
@@ -64,7 +64,7 @@ title: My Personal Webpage
   </div> -->
 
   <div class="o_blog">
-    <h1>Sometimes I'm Writing</h1>
+    <p>Sometimes I'm writing...</p>
     {% for blog in site.blogtype %}
     <div id="{{ blog.css_id }}">
       <h1>{{ blog.blog_name }}</h1>

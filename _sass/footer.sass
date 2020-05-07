@@ -1,2 +1,19 @@
 footer
   background: #ccc
+
+  .sitemap
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-gap: 1rem
+    align-content: center
+
+
+    .logo
+      grid-column: 1 / 2
+      svg
+        height: auto
+        width: 10rem
+    .About
+      grid-column: 2 / 3
+    .Content
+      grid-column: 3 / 4
