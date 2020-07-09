@@ -13,6 +13,9 @@ I'm mostly working on Linux and am currently running Arch Linux and very fortuna
 released a Linux client for their service! It's a Debian package though and needs some adjustment for it
 to run on Arch. <br>
 
+**UPDATE**<br>
+A AUR (Arch user repository) [package](https://aur.archlinux.org/packages/alfaview/) has been made. Now it is possible to simply install it using a package manager such as [yay](https://github.com/Jguer/yay).
+
 Here is our checklist:<br>
 
   1.  [Tool for converting .deb packages](#step-one)
