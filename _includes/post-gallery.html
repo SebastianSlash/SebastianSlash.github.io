@@ -1,0 +1,14 @@
+{% assign images = page.galleries[include.gallery] %}
+
+<div class="post-gallery">
+
+
+  {% assign class_no = 1 %}
+
+  {% for img in images %}
+      <img class="{{ "imgal_" | append: class_no }}" src="{{ page.img-dir }}{{ img.url }}" alt="{{ img.alt }}">
+      {% assign class_no = class_no | plus: 1 %}
+
+  {% endfor %}
+
+</div>

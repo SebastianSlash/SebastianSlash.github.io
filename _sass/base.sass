@@ -10,21 +10,33 @@ p
   font: 20px Lato, sans-serif
   font-weight: 400
   max-width: 600px
+p
 .ticker
   letter-spacing: 0.08em
   font-weight: 700
-
+// @media (min-width: 700px)
+//   p
+//     max-width: 1200px
 .wrapper
   display: grid
-  grid-template-columns: auto 300px 300px auto
+  grid-template-columns: 0.2fr 1fr 1fr 0.2fr
   grid-template-rows: 100px auto auto
   gap: 10px
   grid-template-areas: "header header header header" ". content content ." "footer footer footer footer"
 
 
 
-  .main_nav
-    grid-area: header
+.main_nav
+  grid-area: header
+  position: fixed
+  top: 0px
+  width: 100vw
+  z-index: 2
+  background-color: #aaa
 
-  footer
-    grid-area: footer
+
+footer
+  grid-area: footer
+
+body
+  margin: -10px -10px -10px -10px
