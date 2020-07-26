@@ -1,3 +1,8 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
 h1
   font: 30px Oxygen Mono, monospace
 h2
@@ -31,12 +36,81 @@ p
   position: fixed
   top: 0px
   width: 100vw
+  height: 10vh
   z-index: 2
   background-color: #aaa
+  box-shadow: 0px 6px 15px -10px rgba(0, 0, 0, 0.2)
+
+.nav-links
+  display: flex
+  list-style: none
+  justify-content: space-around
+  align-items: center
+  position: fixed
+  background-color: #999
+  height: 100vh
+  width: 100%
+  flex-direction: column
+  clip-path: inset(10vh 0 0 100%)
+  -webkit-clip-path: inset(10vh 0 0 100%)
+  transition: all 1s ease-out
+  pointer-events: none
+.nav-links.open
+  clip-path: inset(10vh 0 0 0)
+  -webkit-clip-path: inset(10vh 0 0 0)
+  pointer-events: all
+
+
+.line
+  width: 60px
+  height: 5px
+  background: white
+  margin: 12px
+  border-radius: 5px
+  transition: all 0.5s ease-out
+
+
+.line.three.open
+  display: none
+
+.line.one.open
+  -moz-transform: rotate(45deg)
+  -o-transform: rotate(45deg)
+  -webkit-transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
+  transform: rotate(45deg)
+  filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand',  M11=0.9914448613738104, M12=-0.13052619222005157,M21=0.13052619222005157, M22=0.9914448613738104)
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9914448613738104, M12=-0.13052619222005157, M21=0.13052619222005157, M22=0.9914448613738104,sizingMethod='auto expand')"
+  zoom: 1
+  margin-top: 28px
+
+.line.two.open
+  -moz-transform: rotate(-45deg)
+  -o-transform: rotate(-45deg)
+  -webkit-transform: rotate(-45deg)
+  -ms-transform: rotate(-45deg)
+  transform: rotate(-45deg)
+  filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand',  M11=0.9914448613738104, M12=-0.13052619222005157,M21=0.13052619222005157, M22=0.9914448613738104)
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9914448613738104, M12=-0.13052619222005157, M21=0.13052619222005157, M22=0.9914448613738104,sizingMethod='auto expand')"
+  zoom: 1
+  margin-top: -16px
+
+nav
+  position: relative
+
+.hamburger
+  position: absolute
+  cursor: pointer
+  right: 5%
+  top: 50%
+  transform: translate(-5%, -50%)
+  z-index: 2
+.hamburger.open
+  height: 63px
 
 
 footer
   grid-area: footer
 
-body
-  margin: -10px -10px -10px -10px
+// body
+//   margin: -10px -10px -10px -10px

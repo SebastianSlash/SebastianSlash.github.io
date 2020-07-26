@@ -1,5 +1,10 @@
 <nav class="main_nav">
-  <ul>
+  <div class="hamburger">
+    <div class="line one"></div>
+    <div class="line two"></div>
+    <div class="line three"></div>
+  </div>
+  <ul class="nav-links">
   {% for item in site.data.navigation %}
     <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
   {% endfor %}
