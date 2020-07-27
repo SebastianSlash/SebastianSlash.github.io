@@ -1,32 +1,16 @@
 .wrapper
-
   margin-bottom: -10px
 
-  .blog_content
-    grid-area: content
-    justify-self: center
-    max-width: 600px
-    z-index: 1
+.blog_content
+  grid-area: content
+  justify-self: center
+  max-width: 600px
+  z-index: 1
+  box-shadow: -6px 0px 15px -10px rgba(0, 0, 0, 0.2), 6px 0px 15px -10px rgba(0, 0, 0, 0.19)
 
-    box-shadow: -6px 0px 15px -10px rgba(0, 0, 0, 0.2), 6px 0px 15px -10px rgba(0, 0, 0, 0.19)
-  .blog_article
-    background-color: white
-    padding: 20px 30px 20px 30px
-
-
-  code
-    font: $font_code
-    background: rgba(20, 20, 20, 0.10)
-    // padding-left: 7px
-    // padding-right: 7px
-    // padding-bottom: 2px
-    // padding-top: 2px
-    // border-radius: 3px
-    padding-top: 0.1rem
-    padding-right: 0.3rem
-    padding-bottom: 0.2rem
-    padding-left: 0.3rem
-    border-radius: 0.2rem
+.blog_article
+  background-color: white
+  padding: 20px 30px 20px 30px
 
   h1
     font: $h1_blog
@@ -45,49 +29,66 @@
   img
     max-width: 600px
 
-  .feat-img
-    position: fixed
-    top: 10vh
-    z-index: -1
-    height: 350px
+code
+  font: $font_code
+  background: rgba(20, 20, 20, 0.10)
+  // padding-left: 7px
+  // padding-right: 7px
+  // padding-bottom: 2px
+  // padding-top: 2px
+  // border-radius: 3px
+  padding-top: 0.1rem
+  padding-right: 0.3rem
+  padding-bottom: 0.2rem
+  padding-left: 0.3rem
+  border-radius: 0.2rem
+
+
+
+.feat-img
+  position: fixed
+  top: 80px
+  z-index: -1
+  height: 350px
+  max-width: 600px
+  overflow: hidden
+  img
+    margin-top: -315px
+
+
+.post-gallery
+  max-width: 600px
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(280px, 445px))
+  grid-gap: 5px
+
+
+  img
     width: 100%
-    overflow: hidden
+  .imgal_1
+
+
+
+
+    //margin: -75px 0 0 -100px
+.feat-img-spacer
+  height: 230px
+
+@media (min-width: 1000px)
+  .blog_content
+    max-width: 900px
+  p
+    max-width: 900px
+  img
+    max-width: 900px
+
+  .feat-img
+    max-width: 900px
     img
-      margin-top: -65px
+      margin-top: -185px
 
   .post-gallery
-    max-width: 600px
-    display: grid
-    grid-template-columns: repeat(auto-fit, minmax(280px, 445px))
-    grid-gap: 5px
-
-
-    img
-      width: 100%
-    .imgal_1
-
-
-
-
-      //margin: -75px 0 0 -100px
-  .feat-img-spacer
-    height: 230px
-
-  @media (min-width: 1000px)
-    .blog_content
-      max-width: 900px
-    p
-      max-width: 900px
-    img
-      max-width: 900px
-
-    .feat-img
-      width: 900px
-      img
-        margin-top: -185px
-
-    .post-gallery
-      max-width: 900px
+    max-width: 900px
 
 .wrapper::after
   content: ""

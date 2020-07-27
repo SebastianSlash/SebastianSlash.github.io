@@ -1,4 +1,12 @@
 - name: Home
   link: /
+- name: Adventure Blog
+  link: /blogtype/adventure
+- name: Tech Blog
+  link: /blogtype/tech
 - name: Podcast
-  link: /pages/podcast.html
+  link: /pages/podcast
+- name: Impossible List
+  link: /pages/impossible-list
+- name: Projects
+  link: /pages/projects
