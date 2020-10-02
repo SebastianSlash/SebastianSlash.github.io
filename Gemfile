@@ -29,3 +29,9 @@ end
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
+
+# Seems to be neded to run on Windows
+gem "eventmachine", "~> 1.0.0"
+
+# fixing kramdown security vunerability
+gem "kramdown", ">=2.3.0"
