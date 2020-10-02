@@ -9,8 +9,13 @@ h2
   font: 20px Merriweather, serif
   font-weight: bold
 a
+  text-decoration: none
   font: 20px Lato, sans-serif
   max-width: 600px
+  color: #333
+a:visited
+  text-decoration: none
+  color: #333
 p
   font: 20px Lato, sans-serif
   font-weight: 400
@@ -47,26 +52,63 @@ p
       height: 50px
       width: auto
 
-.nav-links
+.nav-img
+  // content: ""
+  // position: fixed
+  width: 40vw
+  height: 100vh
+  opacity: 0.5
+.nav-slide
   display: flex
-  list-style: none
-  justify-content: space-around
-  align-items: center
   position: fixed
   top: 0
   background-color: #999
   height: 100vh
   width: 100%
   padding-top: 80px
-  flex-direction: column
   clip-path: inset(80px 0 0 100%)
   -webkit-clip-path: inset(80px 0 0 100%)
   transition: all 1s ease-out
-  pointer-events: none
-.nav-links.open
+.nav-slide.open
   clip-path: inset(80px 0 0 0)
   -webkit-clip-path: inset(80px 0 0 0)
+.nav-links
+  display: flex
+  list-style: none
+  justify-content: space-around
+  align-items: flex-start
+  padding-left: 10vw
+  // position: fixed
+  // top: 0
+  // background-color: #999
+  // height: 100vh
+  // width: 100%
+  // padding-top: 80px
+  flex-direction: column
+  // clip-path: inset(80px 0 0 100%)
+  // -webkit-clip-path: inset(80px 0 0 100%)
+  // transition: all 1s ease-out
+  pointer-events: none
+.nav-links.open
+  // clip-path: inset(80px 0 0 0)
+  // -webkit-clip-path: inset(80px 0 0 0)
   pointer-events: all
+
+  a.current
+    position: relative
+  a.current::before
+    content: ""
+    // color: black
+    // width: 30px
+    border-style: solid
+    border-width: 8px 0px 8px 13px
+    border-color: transparent transparent transparent #333
+    position: absolute
+    left: -18px
+    top: 6px
+  li:hover
+    color: #555
+
 
 
 .line
@@ -115,10 +157,6 @@ p
   z-index: 2
 .hamburger.open
   height: 63px
-
-
-footer
-  grid-area: footer
 
 // body
 //   margin: -10px -10px -10px -10px

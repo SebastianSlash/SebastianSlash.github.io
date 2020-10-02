@@ -1,16 +1,18 @@
 .wrapper
   margin-bottom: -10px
-
 .blog_content
   grid-area: content
   justify-self: center
   max-width: 600px
+  margin-top: -30px
   z-index: 1
   box-shadow: -6px 0px 15px -10px rgba(0, 0, 0, 0.2), 6px 0px 15px -10px rgba(0, 0, 0, 0.19)
+
 
 .blog_article
   background-color: white
   padding: 20px 30px 20px 30px
+
 
   h1
     font: $h1_blog
@@ -72,7 +74,7 @@ code
 
     //margin: -75px 0 0 -100px
 .feat-img-spacer
-  height: 230px
+  height: 260px
 
 @media (min-width: 1000px)
   .blog_content
@@ -90,15 +92,28 @@ code
   .post-gallery
     max-width: 900px
 
-.wrapper::after
+.wrapper.blog::after
   content: ""
   position: fixed
   width: 100vw
   height: 100vh
-  background-image: url(/assets/images/bg_adventure.jpg)
+  // margin-bottom: 144px         tryed to make the footer parallax reveal
+  // background-image: url(/assets/images/bg_adventure.jpg)
   z-index: -1
   background-position: center center
   background-repeat: no-repeat
   background-attachment: fixed
   background-size: cover
   opacity: 0.5
+
+//styles blog overview
+.wrapper.blog_adventure::after
+  background-image: url(/assets/images/bg_adventure.jpg)
+.wrapper.blog_tech::after
+  background-image: url(/assets/images/bg_tech.jpg)
+
+//styles blog posts
+.wrapper.adventure::after
+  background-image: url(/assets/images/bg_adventure.jpg)
+.wrapper.tech::after
+  background-image: url(/assets/images/bg_tech.jpg)

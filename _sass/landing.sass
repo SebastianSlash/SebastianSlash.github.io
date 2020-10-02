@@ -1,11 +1,16 @@
 .o_content
   grid-area: content
   justify-self: center
+  margin-top: -30px
 
 .o_landing
-  background: pink
+  // background: pink
   height: 100vh
   background-size: contain
+  padding: 5%
+.o_landing::after
+  content: ""
+  transform: skewY(-11deg)
 
   .logo
     svg
@@ -33,3 +38,6 @@
 .o_projects
   background: honeydew
   height: 100vh
+.o_projects::before
+  position: absolute
+  transform: skewY(-11deg)
