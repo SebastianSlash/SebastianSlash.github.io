@@ -4,7 +4,7 @@
   grid-area: content
   justify-self: center
   max-width: 600px
-  margin-top: -30px
+  margin-top: 80px
   z-index: 1
   box-shadow: -6px 0px 15px -10px rgba(0, 0, 0, 0.2), 6px 0px 15px -10px rgba(0, 0, 0, 0.19)
 
@@ -91,7 +91,8 @@ code
 
   .post-gallery
     max-width: 900px
-
+.wrapper.blog
+  margin-bottom: 144px
 .wrapper.blog::after
   content: ""
   position: fixed
@@ -105,6 +106,13 @@ code
   background-attachment: fixed
   background-size: cover
   opacity: 0.5
+.wrapper.blog::before
+  content: ""
+  position: fixed
+  width: 100vw
+  height: 100vh
+  background: white
+  z-index: -2
 
 //styles blog overview
 .wrapper.blog_adventure::after

@@ -1,43 +1,135 @@
-.o_content
-  grid-area: content
-  justify-self: center
-  margin-top: -30px
+.landing
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  margin-top: 80px
+  height: calc(100vh - 80px)
+  margin-bottom: 144px
+  margin-top: 80px
+  z-index: 2
+  background: white
+  align-items: flex-start
+  align-content: strech
+  justify-content: center
 
-.o_landing
-  // background: pink
-  height: 100vh
-  background-size: contain
-  padding: 5%
-.o_landing::after
-  content: ""
-  transform: skewY(-11deg)
 
-  .logo
-    svg
-      height: auto
-      width: 300px
+.home_picture
+  background-image: url(/assets/images/home_face1.jpg)
 
-.o_contact
-  background: yellow
-  height: 100vh
+  height: 100%
+  //width: 50vw
+  min-width: 600px
+  background-size: cover
+  background-position: center
+  padding: 3%
+  flex-grow: 1
+  order: 1
+  flex-basis: 50%
+  display: flex
+  flex-direction: column
+  align-items: center
+.ticker
+  letter-spacing: 0.20em
+  font-weight: 700
+  transform: scale(1, 1.05)
+  -webkit-transform: scale(1, 1.05) /* Safari and Chrome */
+  -moz-transform: scale(1, 1.05) /* Firefox */
+  -ms-transform: scale(1, 1.05) /* IE 9+ */
+  -o-transform: scale(1, 1.05) /* Opera */
+  padding-top: 1%
+  color: purple
 
-.o_impossible
-  background: green
-  height: 100vh
 
-.o_blog
-  grid-area: content
+.about
+  height: 100%
+  padding: 3%
+  flex-grow: 1
+  order: 2
+  flex-basis: 50%
 
-  background: lime
-  height: 100vh
+.social
+  display: flex
+  justify-content: space-around
+  align-self: flex-end
+  padding: 5% 15%
+.social-icon
+  text-decoration: none
+  @extend %fa-icon
+  @extend .fab
 
-.o_podcast
-  background: red
-  height: 100vh
+.fa-linkedin
+  color: purple
+.fa-linkedin:hover
+  color: darkblue
+  transform: scale(1.2)
 
-.o_projects
-  background: honeydew
-  height: 100vh
-.o_projects::before
-  position: absolute
-  transform: skewY(-11deg)
+.fa-github
+  color: purple
+.fa-github:hover
+  color: black
+  transform: scale(1.2)
+
+.fa-instagram
+  color: purple
+.fa-instagram:hover
+  color: #ff33c1
+  transform: scale(1.2)
+
+.fa-stack-exchange
+  color: purple
+.fa-stack-exchange:hover
+  color: rgb(38,0,160)
+  transform: scale(1.2)
+
+
+
+// .fa-linkedin::before
+//   content: fa-content($fa-var-linkedin)
+// .fa-github::before
+//   content: fa-content($fa-var-github)
+// .fa-instagram::before
+//   content: fa-content($fa-var-instagram)
+// .fa-instagram::before
+//   content: fa-content($fa-var-stack)
+
+// .o_content
+//   grid-area: content
+//   justify-self: center
+//   margin-top: 80px
+//
+// .o_landing
+//   // background: pink
+//   height: 100vh
+//   background-size: contain
+//   padding: 5%
+//
+//
+//   .logo
+//     svg
+//       height: auto
+//       width: 300px
+//
+// .o_contact
+//   background: yellow
+//   height: 100vh
+//
+// .o_impossible
+//   background: green
+//   height: 100vh
+//
+// .o_blog
+//   grid-area: content
+//
+//   background: lime
+//   height: 100vh
+//
+// .o_podcast
+//   background: red
+//   height: 100vh
+//
+// .o_projects
+//   background: honeydew
+//   height: 100vh
+// .o_projects::before
+//   position: absolute
+//   transform: skewY(-11deg)

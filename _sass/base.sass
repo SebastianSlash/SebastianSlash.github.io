@@ -1,3 +1,6 @@
+@import "./fontawesome/fontawesome.scss"
+@import "./fontawesome/brands.scss"
+
 *
   margin: 0
   padding: 0
@@ -20,19 +23,23 @@ p
   font: 20px Lato, sans-serif
   font-weight: 400
   max-width: 600px
-p
-.ticker
-  letter-spacing: 0.08em
-  font-weight: 700
+ul
+  list-style: none
+
 // @media (min-width: 700px)
 //   p
 //     max-width: 1200px
+
+html
+  height: 100%
+body
+  height: 100%
 .wrapper
   display: grid
   grid-template-columns: 0.2fr 1fr 1fr 0.2fr
-  grid-template-rows: 100px auto auto
+  grid-template-rows: auto auto
   gap: 10px
-  grid-template-areas: "header header header header" ". content content ." "footer footer footer footer"
+  grid-template-areas: ". content content ." "footer footer footer footer"
 
 
 
@@ -68,7 +75,7 @@ p
   padding-top: 80px
   clip-path: inset(80px 0 0 100%)
   -webkit-clip-path: inset(80px 0 0 100%)
-  transition: all 1s ease-out
+  transition: all 0.5s ease-out
 .nav-slide.open
   clip-path: inset(80px 0 0 0)
   -webkit-clip-path: inset(80px 0 0 0)
@@ -89,6 +96,7 @@ p
   // -webkit-clip-path: inset(80px 0 0 100%)
   // transition: all 1s ease-out
   pointer-events: none
+
 .nav-links.open
   // clip-path: inset(80px 0 0 0)
   // -webkit-clip-path: inset(80px 0 0 0)
@@ -107,6 +115,10 @@ p
     left: -18px
     top: 6px
   li:hover
+    color: #555
+    transform: scale(1.1)
+  a:focus
+    position: relative
     color: #555
 
 

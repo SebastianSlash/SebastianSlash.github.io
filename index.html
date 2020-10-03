@@ -7,16 +7,26 @@ class: home
 <p>
   Just kinda playing around to see how jekyll works on GitHub.
 </p> -->
-<div class="wrapper home">
-  <div class="o_content">
-    <div class="o_landing">
+<div class="home">
+  <div class="landing">
+    <div class="home_picture">
       <div class="logo">
         {% include icons/name_logo.html %}
       </div>
       <p class="ticker">thinking. creating. exploring.</p>
+    </div>
+    <div class="about">
+
       <p>Those are some of the things I like to do whenever I can. </p>
+      <ul class="social">
+        <li><a href="" class="social-icon" target="blank"> <i class="fa fa-linkedin fa-2x"></i></a></li>
+        <li><a href="https://github.com/SebastianSlash" class="social-icon" target="blank"> <i class="fa fa-github fa-2x"></i></a></li>
+        <li><a href="https://www.instagram.com/sebastian_bellitto/" class="social-icon" target="blank"> <i class="fa fa-instagram fa-2x"></i></a></li>
+        <li><a href="" class="social-icon" target="blank"> <i class="fa fa-stack-exchange fa-2x"></i></a></li>
+      </ul>
     </div>
 
+    <!-- // changing to a Landing page with a little about section
     <div class="o_projects">
       <h1>Projects</h1>
       <p>
@@ -44,25 +54,6 @@ class: home
       <p>On my rides all over the place and even learn a thing or two.</p>
     </div>
 
-    <!-- Probably will delete this, since the other way is more modular. -->
-    <!-- <div class="o_blog">
-      <div id="blog_adventure">
-        <h1>Adventure Blog</h1>
-        <p class="ticker">Adventures beyond the Podcast</p>
-        <p>Everything I want to talk about but don't do in the Podcast, I'll do here.</p>
-        <a href="" class="call_action">See what I've been up to</a>
-      </div>
-      <div id="blog_tech">
-        <h1>Tech Blog</h1>
-        <p class="ticker">How I do stuff.</p>
-        <p>
-          All I'm doing here is write down how I do things so I can look it up when I forget.
-          And If I can help someone else out with it, Bonus!
-        </p>
-        <a href="" class="call_action">get technical</a>
-      </div>
-    </div> -->
-
     <div class="o_blog">
       <p>Sometimes I'm writing...</p>
       {% for blog in site.blogtype %}
@@ -80,6 +71,6 @@ class: home
       <div>
         <p>Put your email address here</p>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
