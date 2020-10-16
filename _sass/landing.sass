@@ -2,20 +2,18 @@
   display: flex
   flex-direction: row
   flex-wrap: wrap
-  margin-top: 80px
   height: calc(100vh - 80px)
-  margin-bottom: 144px
+  margin-bottom: calc(144px + 2em)
   margin-top: 80px
   z-index: 2
   background: white
   align-items: flex-start
-  align-content: strech
+  align-content: stretch
   justify-content: center
 
 
 .home_picture
   background-image: url(/assets/images/home_face1.jpg)
-
   height: 100%
   //width: 50vw
   min-width: 600px
@@ -39,8 +37,19 @@
   padding-top: 1%
   color: purple
 
+.goDown
+  border: solid black
+  border-width: 0 5px 5px 0
+  display: inline-block
+  padding: 20px
+  border-radius: 10%
+  transform: rotate(45deg)
+  -webkit-transform: rotate(45deg)
+
+
 
 .about
+  // background: white
   height: 100%
   padding: 3%
   flex-grow: 1
@@ -60,25 +69,21 @@
 .fa-linkedin
   color: purple
 .fa-linkedin:hover
-  color: darkblue
   transform: scale(1.2)
 
 .fa-github
   color: purple
 .fa-github:hover
-  color: black
   transform: scale(1.2)
 
 .fa-instagram
   color: purple
 .fa-instagram:hover
-  color: #ff33c1
   transform: scale(1.2)
 
 .fa-stack-exchange
   color: purple
 .fa-stack-exchange:hover
-  color: rgb(38,0,160)
   transform: scale(1.2)
 
 
