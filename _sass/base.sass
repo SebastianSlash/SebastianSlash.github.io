@@ -63,11 +63,13 @@ body
 .nav-bar
   position: fixed
   top: 0px
-  width: 100vw
+  left: 90vw
+  width: 10vw
   z-index: 3
   background-color: #aaa
   box-shadow: 0px 6px 15px -7px rgba(0, 0, 0, 0.3)
   height: 80px
+  display: none
 
 
 
@@ -81,14 +83,13 @@ body
   background-color: white
   height: 100vh
   width: 100%
-  padding-top: 80px
   // padding-bottom: 80px
-  clip-path: inset(80px 0 0 100%)
-  -webkit-clip-path: inset(80px 0 0 100%)
+  clip-path: inset(0 0 0 100%)
+  -webkit-clip-path: inset(0 0 0 100%)
   transition: all 0.3s ease-out
 .nav-slide.open
-  clip-path: inset(80px 0 0 0)
-  -webkit-clip-path: inset(80px 0 0 0)
+  clip-path: inset(0 0 0 0)
+  -webkit-clip-path: inset(0 0 0 0)
 
 .nav-img
   // content: ""
@@ -157,38 +158,50 @@ body
 
 
 .line
-  width: 40px
-  height: 5px
+  // width: 40px
+  // height: 5px
+  // margin: 8px
   background: white
-  margin: 8px
   border-radius: 5px
   transition: all 0.3s ease-out
+  width: 35px
+  height: 4px
+  margin: 9px
 
 
-.line.three.open
+.line.two.open
   display: none
 
 .line.one.open
-  -moz-transform: rotate(45deg)
-  -o-transform: rotate(45deg)
-  -webkit-transform: rotate(45deg)
-  -ms-transform: rotate(45deg)
-  transform: rotate(45deg)
+  -moz-transform: rotate(43deg)
+  -o-transform: rotate(43deg)
+  -webkit-transform: rotate(43deg)
+  -ms-transform: rotate(43deg)
+  transform: rotate(43deg)
   filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand',  M11=0.9914448613738104, M12=-0.13052619222005157,M21=0.13052619222005157, M22=0.9914448613738104)
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9914448613738104, M12=-0.13052619222005157, M21=0.13052619222005157, M22=0.9914448613738104,sizingMethod='auto expand')"
-  zoom: 1
-  margin-top: 28px
+  // zoom: 1
+  // margin-top: 21px
+  // margin-left: 4px
 
-.line.two.open
-  -moz-transform: rotate(-45deg)
-  -o-transform: rotate(-45deg)
-  -webkit-transform: rotate(-45deg)
-  -ms-transform: rotate(-45deg)
-  transform: rotate(-45deg)
+  width: 43px
+  // height: 5px
+  margin-top: 23px
+  margin-left: 5px
+
+.line.three.open
+  -moz-transform: rotate(-43deg)
+  -o-transform: rotate(-43deg)
+  -webkit-transform: rotate(-43deg)
+  -ms-transform: rotate(-43deg)
+  transform: rotate(-43deg)
   filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand',  M11=0.9914448613738104, M12=-0.13052619222005157,M21=0.13052619222005157, M22=0.9914448613738104)
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9914448613738104, M12=-0.13052619222005157, M21=0.13052619222005157, M22=0.9914448613738104,sizingMethod='auto expand')"
-  zoom: 1
+  // zoom: 1
   margin-top: -13px
+  margin-left: 5px
+  // height: 5px
+  width: 43px
 
 // nav
 //   position: relative
@@ -200,8 +213,35 @@ body
   top: 40px
   transform: translate(-5%, -50%)
   z-index: 4
-.hamburger.open
-  height: 63px
+  background-color: purple
+  opacity: 0.8
+  border-radius: 5px
+  width: 53px
+  height: 48px
+
+
+// .hamburger::before
+//   content: ""
+//   z-index: -1
+//   left: -1.1em
+//   top: 0em
+//   position: absolute
+//   width: 50%
+//   height: 100%
+//   background-color: purple
+//   background: linear-gradient(100deg, transparent 0%, transparent 50%, purple 50%, purple 100%)
+// .hamburger::after
+//   content: ""
+//   z-index: -1
+//   right: -1em
+//   top: 0em
+//   position: absolute
+//   width: 50%
+//   height: 100%
+//   background-color: purple
+//   background: linear-gradient(-80deg, transparent 50%, transparent 0%, purple 50%, purple 100%)
+// .hamburger.open
+//   height: 63px
 
 // body
 //   margin: -10px -10px -10px -10px
