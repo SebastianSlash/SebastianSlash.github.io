@@ -8,6 +8,7 @@ class: blog
       {% include post-featured-image.html image=page.featured-image alt=page.featured-image-alt directory=page.img-dir %}
       <div class="feat-img-spacer"></div>
     {% endif %}
+    <div class="sidebar left"></div>
     <div class="blog_article">
       <h1 id="01_heading" class="article_title">{{ page.title }}</h1>
       <p>
@@ -25,5 +26,6 @@ class: blog
         <a href="#01_heading">back to top</a>
       </div>
     </div>
+    <div class="sidebar right"></div>
   </div>
 </div>

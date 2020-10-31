@@ -1,18 +1,24 @@
-.wrapper
-  margin-bottom: -10px
 .blog_content
-  grid-area: content
-  justify-self: center
-  max-width: 600px
+  //max-width: 600px
   // margin-top: 80px
-  z-index: 1
-  box-shadow: -6px 0px 15px -10px rgba(0, 0, 0, 0.2), 6px 0px 15px -10px rgba(0, 0, 0, 0.19)
+  // z-index: 1
+  //box-shadow: -6px 0px 15px -10px rgba(0, 0, 0, 0.2), 6px 0px 15px -10px rgba(0, 0, 0, 0.19)
 
+  display: flex
+  justify-content: center
+
+.sidebar
+  background: white
+  margin-top: 400px
+  flex-basis: 0px
+  flex-shrink: 0
+  flex-grow: 1
 
 .blog_article
   background-color: white
   padding: 20px 30px 20px 30px
-
+  margin-top: 400px
+  flex-basis: 671px
 
   h1
     font: $h1_blog
@@ -26,10 +32,18 @@
     max-width: 600px
   p
     font: $font_blog
-    max-width: 600px
+    max-width: 610px
     line-height: 1.5
+    // font-weight: 400
+    padding-bottom: 1em
+
   img
     max-width: 600px
+
+  br
+    display: block
+    content: ""
+    margin-top: 0.5em
 
 code
   font: $font_code
@@ -51,8 +65,8 @@ code
   position: fixed
   // top: 80px
   z-index: -1
-  height: 350px
-  max-width: 600px
+  height: 400px
+  //max-width: 600px
   overflow: hidden
   img
     margin-top: -315px
@@ -74,54 +88,55 @@ code
 
     //margin: -75px 0 0 -100px
 .feat-img-spacer
-  height: 260px
+  height: 400px
 
-@media (min-width: 1000px)
-  .blog_content
-    max-width: 900px
-  p
-    max-width: 900px
-  img
-    max-width: 900px
+// @media (min-width: 1000px)
+//   .blog_content
+//     max-width: 900px
+//   p
+//     max-width: 900px
+//   img
+//     max-width: 900px
+//
+//   .feat-img
+//     max-width: 900px
+//     img
+//       margin-top: -185px
+//
+//   .post-gallery
+//     max-width: 900px
+// .wrapper.blog
+//   // margin-bottom: 144px
 
-  .feat-img
-    max-width: 900px
-    img
-      margin-top: -185px
-
-  .post-gallery
-    max-width: 900px
-.wrapper.blog
-  // margin-bottom: 144px
-.wrapper.blog::after
-  content: ""
-  position: fixed
-  width: 100vw
-  height: 100vh
-  // margin-bottom: 144px         tryed to make the footer parallax reveal
-  // background-image: url(/assets/images/bg_adventure.jpg)
-  z-index: -1
-  background-position: center center
-  background-repeat: no-repeat
-  background-attachment: fixed
-  background-size: cover
-  opacity: 0.5
-.wrapper.blog::before
-  content: ""
-  position: fixed
-  width: 100vw
-  height: 100vh
-  background: white
-  z-index: -2
-
-//styles blog overview
-.wrapper.blog_adventure::after
-  background-image: url(/assets/images/bg_adventure.jpg)
-.wrapper.blog_tech::after
-  background-image: url(/assets/images/bg_tech.jpg)
-
-//styles blog posts
-.wrapper.adventure::after
-  background-image: url(/assets/images/bg_adventure.jpg)
-.wrapper.tech::after
-  background-image: url(/assets/images/bg_tech.jpg)
+// .wrapper.blog::after
+//   content: ""
+//   position: fixed
+//   width: 100vw
+//   height: 100vh
+//   // margin-bottom: 144px         tryed to make the footer parallax reveal
+//   // background-image: url(/assets/images/bg_adventure.jpg)
+//   z-index: -1
+//   background-position: center center
+//   background-repeat: no-repeat
+//   background-attachment: fixed
+//   background-size: cover
+//   opacity: 0.5
+// .wrapper.blog::before
+//   content: ""
+//   position: fixed
+//   width: 100vw
+//   height: 100vh
+//   background: white
+//   z-index: -2
+//
+// //styles blog overview
+// .wrapper.blog_adventure::after
+//   background-image: url(/assets/images/bg_adventure.jpg)
+// .wrapper.blog_tech::after
+//   background-image: url(/assets/images/bg_tech.jpg)
+//
+// //styles blog posts
+// .wrapper.adventure::after
+//   background-image: url(/assets/images/bg_adventure.jpg)
+// .wrapper.tech::after
+//   background-image: url(/assets/images/bg_tech.jpg)
