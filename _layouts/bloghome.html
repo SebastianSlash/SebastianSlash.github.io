@@ -14,7 +14,7 @@ class: blog
       {% assign filtered_posts = site.posts | where: 'blogtype', page.b_type %}
       {% for post in filtered_posts %}
         <li>
-          <span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}">{{ post.title }}</a>
+          <span>{{ post.date | date_to_string }}</span> » <a class="special-link" href="{{ post.url }}">{{ post.title }}</a>
           <p>{{ post.excerpt }}</p>
         </li>
       {% endfor %}

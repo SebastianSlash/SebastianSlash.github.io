@@ -105,12 +105,12 @@ body
   background-repeat: no-repeat
   // background-attachment: fixed
   background-size: cover
-  filter: blur(2px)
-  box-shadow: inset -7px -8px 10px black
+  filter: blur(1.5px)
+  box-shadow: inset -6px -8px 15px #999
 
 
 .nav-links
-  background-color: #999
+  background-color: #ccc
   z-index: 1
   flex-basis: 60%
   display: flex
@@ -118,6 +118,7 @@ body
   justify-content: space-around
   align-items: flex-start
   padding-left: 10vw
+  padding-top: 58px
   // box-shadow: -7px 0px 50px rgba(0, 0, 0, 0.8)
   // position: fixed
   // top: 0
@@ -148,9 +149,16 @@ body
     position: absolute
     left: -18px
     top: 6px
-  li:hover
-    color: #555
-    transform: scale(1.1)
+
+
+    // color: #555
+    // transform: scale(1.1)
+    // transition: all 1s ease-out
+    // background: linear-gradient(to top, rgba(0,0,0,0) 65%, #ccc 1%), rgba(128, 0, 128, 0.4)
+  // a
+  //   background: linear-gradient(to top, transparent 10%, #fff 1%), linear-gradient(to bottom, #9198e5, purple 60%)
+  // a:hover
+  //   background: linear-gradient(to top, transparent 100%, #fff 1%), linear-gradient(to bottom, #9198e5, purple 60%)
   a:focus
     position: relative
     color: #555
@@ -209,7 +217,7 @@ body
 .hamburger
   position: fixed
   cursor: pointer
-  right: 45px
+  right: 3%
   top: 40px
   transform: translate(-5%, -50%)
   z-index: 4
@@ -219,29 +227,36 @@ body
   width: 53px
   height: 48px
 
+.link
+  padding: 0 0.4em
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(128, 0, 128, 0.4) inset
+  box-shadow: 0px 0px 0px 0px rgba(128, 0, 128, 0.4) inset
+  -webkit-transition: -webkit-box-shadow 150ms ease-in-out
+  transition: -webkit-box-shadow 150ms ease-in-out
+  transition: box-shadow 150ms ease-in-out
+  transition: box-shadow 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out
 
-// .hamburger::before
-//   content: ""
-//   z-index: -1
-//   left: -1.1em
-//   top: 0em
-//   position: absolute
-//   width: 50%
-//   height: 100%
-//   background-color: purple
-//   background: linear-gradient(100deg, transparent 0%, transparent 50%, purple 50%, purple 100%)
-// .hamburger::after
-//   content: ""
-//   z-index: -1
-//   right: -1em
-//   top: 0em
-//   position: absolute
-//   width: 50%
-//   height: 100%
-//   background-color: purple
-//   background: linear-gradient(-80deg, transparent 50%, transparent 0%, purple 50%, purple 100%)
-// .hamburger.open
-//   height: 63px
+.link:hover
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(128, 0, 128, 0.4) inset
+  box-shadow: 0px -1em 0px 0px rgba(128, 0, 128, 0.4) inset
+  -webkit-transition: -webkit-box-shadow 150ms ease-in-out
+  transition: -webkit-box-shadow 150ms ease-in-out
+  transition: box-shadow 150ms ease-in-out
+  transition: box-shadow 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out
 
-// body
-//   margin: -10px -10px -10px -10px
+.special-link
+  padding: 0 0.1em
+  -webkit-box-shadow: 0px -3px 0px 0px rgba(128, 0, 128, 0.4) inset
+  box-shadow: 0px -3px 0px 0px rgba(128, 0, 128, 0.4) inset
+  -webkit-transition: -webkit-box-shadow 150ms ease-in-out
+  transition: -webkit-box-shadow 150ms ease-in-out
+  transition: box-shadow 150ms ease-in-out
+  transition: box-shadow 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out
+
+.special-link:hover
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(128, 0, 128, 0.4) inset
+  box-shadow: 0px -1em 0px 0px rgba(128, 0, 128, 0.4) inset
+  -webkit-transition: -webkit-box-shadow 150ms ease-in-out
+  transition: -webkit-box-shadow 150ms ease-in-out
+  transition: box-shadow 150ms ease-in-out
+  transition: box-shadow 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out

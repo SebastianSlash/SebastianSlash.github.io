@@ -12,12 +12,12 @@
 
     <div class="sitemapLinks">
       {% for section in site.data.foot_about.sections %}
-      <div class={{ section.title }}>
+      <div class=link-collection {{ section.title }}>
         <ul>
 
-          <p>{{ section.title }}</p>
+          <p class=link-title>{{ section.title }}</p>
           {% for item in section.map_items %}
-          <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+          <li class="link"><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
           {% endfor %}
 
         </ul>

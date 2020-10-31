@@ -17,7 +17,7 @@
     <div class="nav-img"></div>
     <ul class="nav-links">
     {% for item in site.data.navigation %}
-      <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+      <li class="link"><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
     {% endfor %}
     </ul>
   </div>
