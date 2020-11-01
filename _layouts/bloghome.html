@@ -2,10 +2,11 @@
 layout: default
 class: blog
 ---
-<div class="wrapper blog">
+<div class="wrapper bloghome">
+  <div class="sidebar left"></div>
   <div class="blog_home {{ page.css_id }}">
     <h1>{{ page.blog_name }}</h1>
-    <h2>{{ page.author_name }}</h2>
+    <h2 class="author">Author: {{ page.author_name }}</h2>
 
     {{ content }}
 
@@ -20,4 +21,5 @@ class: blog
       {% endfor %}
     </ul>
   </div>
+  <div class="sidebar right"></div>
 </div>
