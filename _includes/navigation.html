@@ -1,7 +1,25 @@
 <nav class="main_nav">
-  <ul>
-  {% for item in site.data.navigation %}
-    <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
-  {% endfor %}
-  </ul>
+  <div class="nav-bar">
+    <div class="logo">
+      <a href="/">
+      {% include icons/name_logo.html %}
+      </a>
+    </div>
+  </div>
+  <div class="hamburger">
+    <div class="line one"></div>
+    <div class="line two"></div>
+    <div class="line three"></div>
+  </div>
+
+
+  <div class="nav-slide">
+    <div class="nav-img"></div>
+    <ul class="nav-links">
+    {% for item in site.data.navigation %}
+      <li class="link"><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+
 </nav>

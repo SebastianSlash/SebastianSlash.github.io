@@ -1,19 +1,56 @@
 footer
   background: #ccc
+  // position: fixed
+  // bottom: 0
+  width: 100%
+  z-index: -3
+  grid-area: footer
+  padding: 15px 20px
 
   .sitemap
-    display: grid
-    grid-template-columns: 1fr 1fr 1fr
-    grid-gap: 1rem
+    // display: grid
+    // grid-template-columns: 1fr 1fr 1fr
+    // grid-gap: 1rem
     align-content: center
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: center
+    align-content: stretch
+    justify-content: center
 
 
     .logo
-      grid-column: 1 / 2
+      flex-grow: 1
+      padding: 15px 10px 15px 10px
+      // grid-column: 1 / 2
       svg
         height: auto
         width: 10rem
-    .About
-      grid-column: 2 / 3
-    .Content
-      grid-column: 3 / 4
+
+    .copyright
+      font-variant: small-caps
+      opacity: 0.5
+      //margin-top: 10px
+
+    .sitemapLinks
+      flex-grow: 2
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      align-items: flex-start
+      align-content: stretch
+      justify-content: space-evenly
+      padding: 15px 0
+
+    // .About
+    //   // grid-column: 2 / 3
+    //   padding: 0px 30px 0px 30px
+    // .Content
+    //   padding: 0px 30px 0px 30px
+    //   // grid-column: 3 / 4
+.link-title
+  padding-bottom: 0.5em
+
+.link-collection
+  padding: 0 10px

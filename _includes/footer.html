@@ -5,19 +5,24 @@
         <a href="/">
         {% include icons/name_logo.html %}
         </a>
+        <p class="copyright">
+          All content copyright {{ "now" | date: "%Y" }}
+        </p>
       </div>
 
-    {% for section in site.data.foot_about.sections %}
-    <div class={{ section.title }}>
-      <ul>
+    <div class="sitemapLinks">
+      {% for section in site.data.foot_about.sections %}
+      <div class=link-collection {{ section.title }}>
+        <ul>
 
-        <p>{{ section.title }}</p>
-        {% for item in section.map_items %}
-        <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
-        {% endfor %}
+          <p class=link-title>{{ section.title }}</p>
+          {% for item in section.map_items %}
+          <li class="link"><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+          {% endfor %}
 
-      </ul>
+        </ul>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </footer>

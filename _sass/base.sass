@@ -1,30 +1,254 @@
+@import "./fontawesome/fontawesome.scss"
+@import "./fontawesome/brands.scss"
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
 h1
-  font: 30px Oxygen Mono, monospace
+  font: $h1_base
+  padding-bottom: 1em
 h2
-  font: 20px Merriweather, serif
+  font: $h2_base
   font-weight: bold
+  padding-bottom: 1em
 a
-  font: 20px Lato, sans-serif
+  text-decoration: none
+  font: $a_base
   max-width: 600px
+  color: #333
+a:visited
+  text-decoration: none
+  color: #333
 p
-  font: 20px Lato, sans-serif
+  font: $p_base
   font-weight: 400
   max-width: 600px
-.ticker
-  letter-spacing: 0.08em
-  font-weight: 700
+  line-height: 1.5
+  padding-bottom: 1em
+ul
+  list-style: none
 
+// @media (min-width: 700px)
+//   p
+//     max-width: 1200px
+
+html
+  height: 100%
+body
+  // height: 100%
 .wrapper
-  display: grid
-  grid-template-columns: auto 300px 300px auto
-  grid-template-rows: 100px auto auto
-  gap: 10px
-  grid-template-areas: "header header header header" ". content content ." "footer footer footer footer"
 
 
 
-  .main_nav
-    grid-area: header
 
-  footer
-    grid-area: footer
+.main_nav
+
+  .logo
+    padding: 15px 15px 15px 2vw
+    grid-column: 1 / 2
+    svg
+      height: 50px
+      width: auto
+
+.nav-bar
+  position: fixed
+  top: 0px
+  left: 90vw
+  width: 10vw
+  z-index: 3
+  background-color: #aaa
+  box-shadow: 0px 6px 15px -7px rgba(0, 0, 0, 0.3)
+  height: 80px
+  display: none
+
+
+
+.nav-slide
+  display: flex
+  flex-direction: row
+  justify-content: stretch
+  position: fixed
+  z-index: 2
+  top: 0
+  background-color: white
+  height: 100vh
+  width: 100%
+  // padding-bottom: 80px
+  clip-path: inset(0 0 0 100%)
+  -webkit-clip-path: inset(0 0 0 100%)
+  transition: all 0.3s ease-out
+.nav-slide.open
+  clip-path: inset(0 0 0 0)
+  -webkit-clip-path: inset(0 0 0 0)
+
+.nav-img
+  // content: ""
+  // position: fixed
+  width: 40vw
+  height: 100vh
+  opacity: 0.8
+  flex-shrink: 1
+  flex-grow: 1
+  flex-basis: 40%
+  background-image: url(/assets/images/navigation.jpg)
+  background-position: center center
+  background-repeat: no-repeat
+  // background-attachment: fixed
+  background-size: cover
+  filter: blur(1.5px)
+  box-shadow: inset -6px -8px 15px #999
+
+
+.nav-links
+  background-color: #ccc
+  z-index: 1
+  flex-basis: 60%
+  display: flex
+  list-style: none
+  justify-content: space-around
+  align-items: flex-start
+  padding-left: 10vw
+  padding-top: 58px
+  // box-shadow: -7px 0px 50px rgba(0, 0, 0, 0.8)
+  // position: fixed
+  // top: 0
+  // background-color: #999
+  // height: 100vh
+  // width: 100%
+  // padding-top: 80px
+  flex-direction: column
+  // clip-path: inset(80px 0 0 100%)
+  // -webkit-clip-path: inset(80px 0 0 100%)
+  // transition: all 1s ease-out
+  pointer-events: none
+
+.nav-links.open
+  // clip-path: inset(80px 0 0 0)
+  // -webkit-clip-path: inset(80px 0 0 0)
+  pointer-events: all
+
+  a.current
+    position: relative
+  a.current::before
+    content: ""
+    // color: black
+    // width: 30px
+    border-style: solid
+    border-width: 8px 0px 8px 13px
+    border-color: transparent transparent transparent #333
+    position: absolute
+    left: -18px
+    top: 6px
+
+
+    // color: #555
+    // transform: scale(1.1)
+    // transition: all 1s ease-out
+    // background: linear-gradient(to top, rgba(0,0,0,0) 65%, #ccc 1%), rgba(128, 0, 128, 0.4)
+  // a
+  //   background: linear-gradient(to top, transparent 10%, #fff 1%), linear-gradient(to bottom, #9198e5, purple 60%)
+  // a:hover
+  //   background: linear-gradient(to top, transparent 100%, #fff 1%), linear-gradient(to bottom, #9198e5, purple 60%)
+  a:focus
+    position: relative
+    color: #555
+
+
+
+.line
+  // width: 40px
+  // height: 5px
+  // margin: 8px
+  background: white
+  border-radius: 5px
+  transition: all 0.3s ease-out
+  width: 35px
+  height: 4px
+  margin: 9px
+
+
+.line.two.open
+  display: none
+
+.line.one.open
+  -moz-transform: rotate(43deg)
+  -o-transform: rotate(43deg)
+  -webkit-transform: rotate(43deg)
+  -ms-transform: rotate(43deg)
+  transform: rotate(43deg)
+  filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand',  M11=0.9914448613738104, M12=-0.13052619222005157,M21=0.13052619222005157, M22=0.9914448613738104)
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9914448613738104, M12=-0.13052619222005157, M21=0.13052619222005157, M22=0.9914448613738104,sizingMethod='auto expand')"
+  // zoom: 1
+  // margin-top: 21px
+  // margin-left: 4px
+
+  width: 43px
+  // height: 5px
+  margin-top: 23px
+  margin-left: 5px
+
+.line.three.open
+  -moz-transform: rotate(-43deg)
+  -o-transform: rotate(-43deg)
+  -webkit-transform: rotate(-43deg)
+  -ms-transform: rotate(-43deg)
+  transform: rotate(-43deg)
+  filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand',  M11=0.9914448613738104, M12=-0.13052619222005157,M21=0.13052619222005157, M22=0.9914448613738104)
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9914448613738104, M12=-0.13052619222005157, M21=0.13052619222005157, M22=0.9914448613738104,sizingMethod='auto expand')"
+  // zoom: 1
+  margin-top: -13px
+  margin-left: 5px
+  // height: 5px
+  width: 43px
+
+// nav
+//   position: relative
+
+.hamburger
+  position: fixed
+  cursor: pointer
+  right: 3%
+  top: 40px
+  transform: translate(-5%, -50%)
+  z-index: 4
+  background-color: purple
+  opacity: 0.8
+  border-radius: 5px
+  width: 53px
+  height: 48px
+
+.link
+  padding: 0 0.4em
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(128, 0, 128, 0.4) inset
+  box-shadow: 0px 0px 0px 0px rgba(128, 0, 128, 0.4) inset
+  -webkit-transition: -webkit-box-shadow 150ms ease-in-out
+  transition: -webkit-box-shadow 150ms ease-in-out
+  transition: box-shadow 150ms ease-in-out
+  transition: box-shadow 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out
+
+.link:hover
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(128, 0, 128, 0.4) inset
+  box-shadow: 0px -1em 0px 0px rgba(128, 0, 128, 0.4) inset
+  -webkit-transition: -webkit-box-shadow 150ms ease-in-out
+  transition: -webkit-box-shadow 150ms ease-in-out
+  transition: box-shadow 150ms ease-in-out
+  transition: box-shadow 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out
+
+.special-link
+  padding: 0 0.1em
+  -webkit-box-shadow: 0px -3px 0px 0px rgba(128, 0, 128, 0.4) inset
+  box-shadow: 0px -3px 0px 0px rgba(128, 0, 128, 0.4) inset
+  -webkit-transition: -webkit-box-shadow 150ms ease-in-out
+  transition: -webkit-box-shadow 150ms ease-in-out
+  transition: box-shadow 150ms ease-in-out
+  transition: box-shadow 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out
+
+.special-link:hover
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(128, 0, 128, 0.4) inset
+  box-shadow: 0px -1em 0px 0px rgba(128, 0, 128, 0.4) inset
+  -webkit-transition: -webkit-box-shadow 150ms ease-in-out
+  transition: -webkit-box-shadow 150ms ease-in-out
+  transition: box-shadow 150ms ease-in-out
+  transition: box-shadow 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out

@@ -1,6 +1,8 @@
 sections:
   - title: About
     map_items:
+      - name: Home
+        link: /
       - name: contact
         link: /pages/contact
       - name: privacy policy

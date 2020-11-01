@@ -1,36 +1,153 @@
-.wrapper
-  .blog_content
-    grid-area: content
-  .main_nav
-    grid-area: header
-  code
-    font: 18px Cutive Mono, monospace
-    background: rgba(20, 20, 20, 0.10)
-    // padding-left: 7px
-    // padding-right: 7px
-    // padding-bottom: 2px
-    // padding-top: 2px
-    // border-radius: 3px
-    padding-top: 0.1rem
-    padding-right: 0.3rem
-    padding-bottom: 0.2rem
-    padding-left: 0.3rem
-    border-radius: 0.2rem
+.wrapper.bloghome
+  display: flex
+  justify-content: center
+
+.blog_home
+  h1
+    text-align: center
+  .author
+    font-weight: normal
+
+.blog_content
+  //max-width: 600px
+  // margin-top: 80px
+  // z-index: 1
+  //box-shadow: -6px 0px 15px -10px rgba(0, 0, 0, 0.2), 6px 0px 15px -10px rgba(0, 0, 0, 0.19)
+
+  display: flex
+  justify-content: center
+
+.sidebar
+  background: white
+  margin-top: 400px
+  flex-basis: 0px
+  flex-shrink: 0
+  flex-grow: 1
+
+.blog_article
+  background-color: white
+  padding: 20px 30px 20px 30px
+  margin-top: 400px
+  flex-basis: 671px
 
   h1
-    font: 30px Merriweather, serif
+    font: $h1_blog
 
   h2
-    font: 20px Merriweather, serif
+    font: $h2_blog
     font-weight: bold
 
   a
-    font: 20px Lato, sans-serif
+    font: $font_blog
     max-width: 600px
-
   p
-    font: 20px Lato, sans-serif
+    font: $font_blog
+    max-width: 610px
+    line-height: 1.5
+    // font-weight: 400
+    padding-bottom: 1em
+
+  img
     max-width: 600px
 
-  footer
-    grid-area: footer
+  br
+    display: block
+    content: ""
+    margin-top: 0.5em
+
+code
+  font: $font_code
+  background: rgba(20, 20, 20, 0.10)
+  // padding-left: 7px
+  // padding-right: 7px
+  // padding-bottom: 2px
+  // padding-top: 2px
+  // border-radius: 3px
+  padding-top: 0.1rem
+  padding-right: 0.3rem
+  padding-bottom: 0.2rem
+  padding-left: 0.3rem
+  border-radius: 0.2rem
+
+
+
+.feat-img
+  position: fixed
+  // top: 80px
+  z-index: -1
+  height: 400px
+  width: 100vw
+  //max-width: 600px
+  overflow: hidden
+  // img
+  //   margin-top: -315px
+
+
+.post-gallery
+  max-width: 600px
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(280px, 445px))
+  grid-gap: 5px
+
+
+  img
+    width: 100%
+  .imgal_1
+
+
+
+
+    //margin: -75px 0 0 -100px
+.feat-img-spacer
+  height: 400px
+
+// @media (min-width: 1000px)
+//   .blog_content
+//     max-width: 900px
+//   p
+//     max-width: 900px
+//   img
+//     max-width: 900px
+//
+//   .feat-img
+//     max-width: 900px
+//     img
+//       margin-top: -185px
+//
+//   .post-gallery
+//     max-width: 900px
+// .wrapper.blog
+//   // margin-bottom: 144px
+
+// .wrapper.blog::after
+//   content: ""
+//   position: fixed
+//   width: 100vw
+//   height: 100vh
+//   // margin-bottom: 144px         tryed to make the footer parallax reveal
+//   // background-image: url(/assets/images/bg_adventure.jpg)
+//   z-index: -1
+//   background-position: center center
+//   background-repeat: no-repeat
+//   background-attachment: fixed
+//   background-size: cover
+//   opacity: 0.5
+// .wrapper.blog::before
+//   content: ""
+//   position: fixed
+//   width: 100vw
+//   height: 100vh
+//   background: white
+//   z-index: -2
+//
+// //styles blog overview
+// .wrapper.blog_adventure::after
+//   background-image: url(/assets/images/bg_adventure.jpg)
+// .wrapper.blog_tech::after
+//   background-image: url(/assets/images/bg_tech.jpg)
+//
+// //styles blog posts
+// .wrapper.adventure::after
+//   background-image: url(/assets/images/bg_adventure.jpg)
+// .wrapper.tech::after
+//   background-image: url(/assets/images/bg_tech.jpg)

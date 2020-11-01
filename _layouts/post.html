@@ -1,21 +1,31 @@
 ---
 layout: default
+class: blog
 ---
-<div class="blog_content">
-  <h1 id="01_heading" class="article_title">{{ page.title }}</h1>
-  <p>
-    {{ page.date | date_to_string }} | {{ page.author }}
-    {% assign blog = site.blogtype | where: 'b_type', page.blogtype | first %}
-    {% if blog %}
-      - <a href="{{ blog.url }}">{{ blog.blog_name }}</a>
+<div class="wrapper blog {{ page.blogtype }}">
+  <div class="blog_content">
+    {% if page.featured-image %}
+      {% include post-featured-image.html image=page.featured-image alt=page.featured-image-alt directory=page.img-dir %}
+      <div class="feat-img-spacer"></div>
     {% endif %}
-  </p>
-
-  <div class="post">
-    {{ content }}
+    <div class="sidebar left"></div>
+    <div class="blog_article">
+      <h1 id="01_heading" class="article_title">{{ page.title }}</h1>
+      <p>
+        {{ page.date | date_to_string }} | {{ page.author }}
+        {% assign blog = site.blogtype | where: 'b_type', page.blogtype | first %}
+        {% if blog %}
+          - <a href="{{ blog.url }}">{{ blog.blog_name }}</a>
+        {% endif %}
+      </p>
+      <p><br></p>
+      <div class="post">
+        {{ content }}
+      </div>
+      <div>
+        <a href="#01_heading">back to top</a>
+      </div>
+    </div>
+    <div class="sidebar right"></div>
   </div>
-  <div>
-    <a href="#01_heading">back to top</a>
-</div>
-
 </div>
