@@ -1,0 +1,22 @@
+sections:
+  - title: Professional
+    list_items:
+      - name: start a Podcast
+        working_on: suspended
+        completed: todo
+        sequel: False
+        compoletion_date:
+        link:
+
+  - title: Athletic Goals
+    list_items:
+      - name: cycle 7000 km in 2021
+        working_on: False
+        completed: False
+        compoletion_date:
+        link:
+      - name: cycle from Germany to Taiwan (I know it's an island...)
+        working_on: False
+        completed: False
+        compoletion_date:
+        link:

@@ -75,19 +75,41 @@
   display: inline-block
 
 .about
-  // background: white
   min-height: 100vh
-  padding: 3%
+  padding: 5em 3% 3% 3%
   flex-grow: 1
   order: 2
   flex-basis: 450px
   background-color: white
+  display: flex
+  justify-content: center
+
+.about-content
+  display: flex
+  flex-direction: column
+  align-content: flex-start
+  justify-content: center
+
+  // background: white
+  // min-height: 100vh
+  // padding: 3%
+  // flex-grow: 1
+  // order: 2
+  // flex-basis: 450px
+  // background-color: white
+  // display: flex
+  // flex-direction: column
+  // align-content: center
+
+
 
 .social
+  justify-self: flex-end
+  width: 100%
   display: flex
   justify-content: space-around
   align-self: flex-end
-  padding: 5% 15%
+  padding: 15% 15% 0 15%
 .social-icon
   text-decoration: none
   @extend %fa-icon

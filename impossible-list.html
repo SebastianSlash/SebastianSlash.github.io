@@ -1,0 +1,21 @@
+---
+layout: default
+title: Impossible list
+class: impossible
+---
+<div class="wrapper impossible">
+  <div class="sidebar left"></div>
+  <div class="impossible content">
+    {% for section in site.data.impossible_list.sections %}
+    <div class="impossible-section {{ section.title }}">
+      <ul>
+        <h2 class="impossible-title">{{ section.title }}</h2>
+        {% for item in section.list_items %}
+        <li class="impossible-item {{ item.completed }} {{ item.working_on }}">{{ item.name }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="sidebar right"></div>
+</div>
