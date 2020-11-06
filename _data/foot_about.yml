@@ -1,23 +1,23 @@
 sections:
   - title: About
     map_items:
-      - name: Home
+      - name: About
         link: /
-      - name: contact
+      - name: Contact
         link: /pages/contact
-      - name: privacy policy
-        link:
-      - name: imprint
-        link:
+      - name: Privacy Policy
+        link: /privacy-policy
+      # - name: Imprint
+      #   link: /imprint
   - title: Content
     map_items:
       - name: Adventure Blog
         link: /blogtype/adventure
       - name: Tech Blog
         link: /blogtype/tech
-      - name: Podcast
-        link: /pages/podcast
+      # - name: Podcast
+      #   link: /pages/podcast
       - name: Impossible List
-        link: /pages/impossible-list
-      - name: Projects
-        link: /pages/projects
+        link: /impossible-list
+      # - name: Projects
+      #   link: /pages/projects

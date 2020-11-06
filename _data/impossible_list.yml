@@ -1,22 +1,160 @@
+# possible values:
+#   - working_on: False / True
+#   - completed: False / True
+#   - sequel: False / True
+#   - subcategory: False / True  # if the main item is a subcategory
+#   - completion_date: date
+#   - link: link to related post or similar
+
 sections:
   - title: Professional
     list_items:
-      - name: start a Podcast
-        working_on: suspended
-        completed: todo
+      - name: Bachelor degree in Medical Enigneering
+        working_on: True
+        completed: False
         sequel: False
-        compoletion_date:
+        subcategory: False
+        completion_date:
+        link:
+      - name: Start a Podcast
+        working_on: False
+        completed: False
+        sequel: False
+        subcategory: False
+        completion_date:
+        link:
+      - name: Properly code my personal web page
+        working_on: True
+        completed: False
+        sequel: False
+        subcategory: False
+        completion_date:
         link:
 
-  - title: Athletic Goals
+  - title: Cycling
     list_items:
-      - name: cycle 7000 km in 2021
+      - name: Cycle 7000 km in 2021
         working_on: False
         completed: False
-        compoletion_date:
+        sequel: False # better to show the next step at the end/after 2021
+        subcategory: False
+        completion_date:
         link:
-      - name: cycle from Germany to Taiwan (I know it's an island...)
+        # list_next:
+        #   - name: Cycle 8000 km in 2022
+        #     working_on: False
+        #     completed: False
+        #     completion_date:
+        #     link:
+        #   - name: Cycle 9000 km in 2023
+        #     working_on: False
+        #     completed: False
+        #     completion_date:
+        #     link:
+      - name: Participate in a ultra endurance race
+        working_on: False
+        completed: True
+        sequel: False
+        subcategory: False
+        completion_date: 2020-07-21
+        link: /blog/2020/07/21/riding-the-orbit360-BW
+      - name: Cycle from Germany to Taiwan (I know it's an island...)
         working_on: False
         completed: False
-        compoletion_date:
+        sequel: False
+        subcategory: False
+        completion_date:
         link:
+      - name: Cycle from Pforzheim (Germany) to Genova (Italy), made it to Brescia (800 km)
+        working_on: False
+        completed: True
+        sequel: False
+        subcategory: False
+        completion_date: 2016-09-14
+        link:
+      - name: Cycle from Pforzheim (Germany) to Barcelona (Spain)
+        working_on: False
+        completed: True
+        sequel: False
+        subcategory: False
+        completion_date: 2018-09-16
+        link:
+      - name: Cycle around Germany (1300 km)
+        working_on: False
+        completed: True
+        sequel: False
+        subcategory: False
+        completion_date: 2020-08-27
+        link:
+  - title: Language
+    list_items:
+      - name: Learn Japanese
+        working_on: False
+        completed: False
+        sequel: True
+        subcategory: True
+        completion_date:
+        link:
+        list_next:
+          - name: Take a beginner course
+            working_on: False
+            completed: True
+            sequel: False
+            completion_date:
+            link:
+          - name: Really know everything from the beginner course
+            working_on: False
+            completed: False
+            completion_date:
+            link:
+
+      - name: Learn Spanish
+        working_on: False
+        completed: False
+        sequel: True
+        subcategory: True
+        completion_date:
+        link:
+        list_next:
+          - name: Get a B2 certificate
+            working_on: False
+            completed: False
+            completion_date:
+            link:
+      - name: Learn Portogese
+        working_on: False
+        completed: False
+        sequel: True
+        subcategory: True
+        completion_date:
+        link:
+        list_next:
+          - name: Get through part 1 of Porgugese For Dummies
+            working_on: False
+            completed: False
+            completion_date:
+            link:
+      - name: Learn Italian
+        working_on: False
+        completed: False
+        sequel: True
+        subcategory: True
+        completion_date:
+        link:
+        list_next:
+          - name: Get a B2 certificate
+            working_on: False
+            completed: True
+            completion_date:
+            link:
+          - name: Get a C1 certificate
+            working_on: True
+            completed: False
+            completion_date:
+            link:
+      # - name: English
+      #   working_on: False
+      #   completed: False
+      #   sequel: False
+      #   completion_date:
+      #   link:

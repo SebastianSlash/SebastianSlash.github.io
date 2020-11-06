@@ -1,3 +1,30 @@
 .wrapper.impossible
   display: flex
   justify-content: center
+
+.impossible.content
+  padding: 20px 30px 20px 30px
+  margin-top: 80px
+  display: flex
+  flex-direction: column
+
+  h1
+    text-align: center
+
+  .fa-li
+    color: purple
+
+.crossed
+  text-decoration: line-through
+  text-decoration-color: rgba(128, 0, 128, 0.6)
+  text-decoration-thickness: 4px
+
+.impossible-section
+  @extend %fa-icon
+  @extend .fas
+  @extend .far
+
+  padding: 1em 0
+
+.impossible-item
+  padding: 0.3em 0

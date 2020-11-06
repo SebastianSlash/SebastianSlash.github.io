@@ -6,14 +6,91 @@ class: impossible
 <div class="wrapper impossible">
   <div class="sidebar left"></div>
   <div class="impossible content">
-    {% for section in site.data.impossible_list.sections %}
-    <div class="impossible-section {{ section.title }}">
-      <ul>
-        <h2 class="impossible-title">{{ section.title }}</h2>
-        {% for item in section.list_items %}
-        <li class="impossible-item {{ item.completed }} {{ item.working_on }}">{{ item.name }}</li>
+    <!-- <ul class="fa-ul">
+      <li><span class="fa-li"><i class="fas fa-check-square"></i></span>List icons can</li>
+      <li><span class="fa-li"><i class="fas fa-check-square"></i></span>be used to</li>
+      <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>replace bullets</li>
+      <li><span class="fa-li"><i class="far fa-square"></i></span>in lists</li>
+    </ul> -->
+    <h1>The <span class="crossed">Impossible</span> List</h1>
+
+    <div class="impossible-section">
+      <h2>Current Focus</h2>
+      <ul class="fa-ul">
+        {% for section in site.data.impossible_list.sections %}
+          {% for item in section.list_items %}
+            {% if item.working_on %}
+            <li class="impossible-item">
+              <span class="fa-li">
+                <i class="far fa-square fa-sm"></i>
+              </span>{{ item.name }}
+            </li>
+            {% endif %}
+            {% if item.sequel %}
+              {% for next_item in item.list_next %}
+                {% if next_item.working_on %}
+                <li class="impossible-item">
+                  <span class="fa-li">
+                    <i class="far fa-square fa-sm"></i>
+                  </span>{% if item.subcategory %}{{ item.name }}: {% endif %}{{ next_item.name }}
+                </li>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
         {% endfor %}
       </ul>
+    </div>
+
+    {% for section in site.data.impossible_list.sections %}
+    <div class="impossible-section {{ section.title }}">
+      <h2 class="impossible-title">{{ section.title }}</h2>
+
+      <ul class="fa-ul {{ section.title }}">
+        {% for item in section.list_items %}
+        <li class="impossible-item {{ item.completed }}">
+          <span class="fa-li">
+            {% if item.completed %}
+            <i class="fas fa-check-square fa-sm"></i>
+            {% else %}
+            <i class="far fa-square fa-sm"></i>
+            {% endif %}
+          </span>{{ item.name }}
+          {% if item.link != None %}
+          <a href="{{ item.link }}" class="special-link">
+          {% endif %}
+            {% if item.completed %}[{{ item.completion_date | date: "%b %d , %Y" }}]
+            {% endif%}
+          {% if item.link != None %}
+          </a>
+          {% endif %}
+        </li>
+        {% if item.sequel %}
+        <ul class="fa-ul">
+          {% for next_item in item.list_next %}
+          <li class="impossible-item {{ next_item.completed }}">
+            <span class="fa-li">
+              {% if next_item.completed %}
+              <i class="fas fa-check-square fa-sm"></i>
+              {% else %}
+              <i class="far fa-square fa-sm"></i>
+              {% endif %}
+            </span>{{ next_item.name }}
+            {% if item.link != None %}
+            <a href="{{ item.link }}" class="special-link">
+            {% endif %}
+              {% if item.completed %}[{{ item.completion_date | date: "%b %d , %Y" }}]
+              {% endif%}
+            {% if item.link != None %}
+            </a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% endfor %}
+      </ul>
+
     </div>
     {% endfor %}
   </div>

@@ -5,6 +5,11 @@ title: "How I set up Atom code editor"
 date: 2020-05-07
 author: Sebastian Bellitto
 ---
+In this Post I'm listing all I do to setup Atom.
+
+All settings that I change and packages and themes I use. Packages are
+divided into different use case categories.
+
 *ToDo: Add link to Packages&Themes*
 # Settings
 

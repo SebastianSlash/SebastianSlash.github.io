@@ -6,4 +6,6 @@ ticker_txt: Adventures beyond the Podcast
 call_to_action: See what I've been up to
 css_id: blog_adventure
 ---
-Everything I want to talk about but don't do in the Podcast, I'll do here.
+<!-- Everything I want to talk about but don't do in the Podcast, I'll do here. -->
+Outside in the big wide world.
+Tag along on some of my adventures.

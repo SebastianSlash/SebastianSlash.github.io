@@ -110,10 +110,17 @@
   justify-content: space-around
   align-self: flex-end
   padding: 15% 15% 0 15%
+
 .social-icon
   text-decoration: none
   @extend %fa-icon
   @extend .fab
+  @extend .far
+
+.fa-envelope
+  color: purple
+.fa-envelope:hover
+  transform: scale(1.2)
 
 .fa-linkedin
   color: purple
@@ -134,56 +141,3 @@
   color: purple
 .fa-stack-exchange:hover
   transform: scale(1.2)
-
-
-
-// .fa-linkedin::before
-//   content: fa-content($fa-var-linkedin)
-// .fa-github::before
-//   content: fa-content($fa-var-github)
-// .fa-instagram::before
-//   content: fa-content($fa-var-instagram)
-// .fa-instagram::before
-//   content: fa-content($fa-var-stack)
-
-// .o_content
-//   grid-area: content
-//   justify-self: center
-//   margin-top: 80px
-//
-// .o_landing
-//   // background: pink
-//   height: 100vh
-//   background-size: contain
-//   padding: 5%
-//
-//
-//   .logo
-//     svg
-//       height: auto
-//       width: 300px
-//
-// .o_contact
-//   background: yellow
-//   height: 100vh
-//
-// .o_impossible
-//   background: green
-//   height: 100vh
-//
-// .o_blog
-//   grid-area: content
-//
-//   background: lime
-//   height: 100vh
-//
-// .o_podcast
-//   background: red
-//   height: 100vh
-//
-// .o_projects
-//   background: honeydew
-//   height: 100vh
-// .o_projects::before
-//   position: absolute
-//   transform: skewY(-11deg)

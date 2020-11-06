@@ -1,10 +1,19 @@
 @import "./fontawesome/fontawesome.scss"
 @import "./fontawesome/brands.scss"
+@import "./fontawesome/solid.scss"
+@import "./fontawesome/regular.scss"
 
 *
   margin: 0
   padding: 0
   box-sizing: border-box
+
+html
+  height: 100%
+body
+  min-height: 100%
+  display: flex
+  flex-direction: column
 
 h1
   font: $h1_base
@@ -15,8 +24,8 @@ h2
   padding-bottom: 1em
 a
   text-decoration: none
-  font: $a_base
-  max-width: 600px
+  // font: $a_base
+  // max-width: 600px
   // color: #333
   color: black
 a:visited
@@ -31,19 +40,16 @@ p
   padding-bottom: 1em
 ul
   list-style: none
+li
+  font: $p_base
+  font-weight: 400
 
 // @media (min-width: 700px)
 //   p
 //     max-width: 1200px
 
-html
-  height: 100%
-body
-  // height: 100%
+
 .wrapper
-
-
-
 
 .main_nav
 

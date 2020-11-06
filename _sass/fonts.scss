@@ -1,0 +1,79 @@
+$text-font-path: "../webfonts/text_fonts";
+
+@font-face {
+   font-family: 'BaseSans';  /* Change this to whatever you like. */
+   src: url('#{$text-font-path}/Lato-Regular.ttf') format('truetype');
+   font-style: normal;  /* Associates values of "normal" with this resource. */
+   font-weight: normal;  /* As above for weight. */
+}
+@font-face {
+   font-family: 'BaseSans';  /* Importantly, the same as in the above block; the family name. */
+   src: url('#{$text-font-path}/Lato-Italic.ttf') format('truetype');
+   font-style: italic;  /* Associates values of "italic" with this resource. */
+   font-weight: normal;  /* ... It's not a bold-italic font style. */
+}
+
+@font-face {
+   font-family: 'BaseSerif';
+   src: url('#{$text-font-path}/Merriweather-Regular.ttf') format('truetype');
+   font-style: normal;
+   font-weight: normal;
+}
+@font-face {
+   font-family: 'BaseSerif';
+   src: url('#{$text-font-path}/Merriweather-Italic.ttf') format('truetype');
+   font-style: italic;
+   font-weight: normal;
+}
+@font-face {
+   font-family: 'BaseSerif';
+   src: url('#{$text-font-path}/Merriweather-Bold.ttf') format('truetype');
+   font-style: normal;
+   font-weight: bold;
+}
+@font-face {
+   font-family: 'BaseSerif';
+   src: url('#{$text-font-path}/Merriweather-Bolditalic.ttf') format('truetype');
+   font-style: italic;
+   font-weight: bold;
+}
+
+@font-face {
+   font-family: 'BaseMono';
+   src: url('#{$text-font-path}/RobotoMono-Regular.ttf') format('truetype');
+   font-style: normal;
+   font-weight: normal;
+}
+@font-face {
+   font-family: 'BaseMono';
+   src: url('#{$text-font-path}/RobotoMono-Bold.ttf') format('truetype');
+   font-style: normal;
+   font-weight: bold;
+}
+@font-face {
+   font-family: 'BaseMono';
+   src: url('#{$text-font-path}/RobotoMono-Bolditalic.ttf') format('truetype');
+   font-style: italic;
+   font-weight: bold;
+}
+
+// body {
+//    font-family:'MyWebfont', georgia, serif;  /* Provides a system font fallback. */
+// }
+//
+// em {
+//    font-style: italic;  /* If @font-face is supported, the italic Web font is used. If not, the italic Georgia style is lifted from the user's computer. Either way, a faux style is not allowed to creep in. */
+// }
+
+
+// ============================================================================
+// Font Variables
+$h1_blog: 30px BaseSerif;
+$h2_blog: 20px BaseSerif;
+$font_blog: 18px BaseSerif;
+$font_code: 18px BaseMono;
+
+$h1_base: 30px BaseMono;
+$h2_base: 20px BaseSerif;
+$p_base: 19px BaseSans;
+// $a_base: 20px BasesSans;

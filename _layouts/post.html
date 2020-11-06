@@ -11,7 +11,7 @@ class: blog
     <div class="sidebar left"></div>
     <div class="blog_article">
       <h1 id="01_heading" class="article_title">{{ page.title }}</h1>
-      <p>
+      <p class="post-meta">
         {{ page.date | date_to_string }} | {{ page.author }}
         {% assign blog = site.blogtype | where: 'b_type', page.blogtype | first %}
         {% if blog %}
