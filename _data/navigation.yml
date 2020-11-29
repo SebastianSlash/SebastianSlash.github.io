@@ -1,5 +1,7 @@
 - name: Home
   link: /
+- name: Contact
+  link: /contact
 - name: Adventure Blog
   link: /blogtype/adventure
 - name: Tech Blog

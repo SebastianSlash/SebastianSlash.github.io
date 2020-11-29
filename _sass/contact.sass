@@ -1,0 +1,71 @@
+.wrapper.contact
+  display: flex
+  justify-content: center
+
+.contact.content
+  padding: 20px 30px 20px 30px
+  margin-top: 80px
+
+  h1
+    text-align: center
+
+
+
+
+.contactwith
+  display: flex
+  width: 100%
+  align-items: center
+
+
+.contact-wrapper
+  display: flex
+  border-style: solid
+  border-color: $accent_col_rgb
+  border-radius: 10px
+  margin: 3% 1%
+  flex-grow: 1
+  justify-content: space-between
+
+  p
+    padding: 1%
+.action_btn.right
+  border-width: 0px 0px 0px 3px
+  border-radius: 0px 8px 8px 0px
+.action_btn.left
+  border-width: 0px 3px 0px 0px
+  border-radius: 8px 0px 0px 8px
+.action_btn
+  border-style: solid
+  border-color: $accent_col_rgb
+  background: $accent_col_rgb
+  padding: 1% 2%
+  margin: -1px
+  i
+    color: white
+.action_btn:hover
+  background: $accent2_col_rgb
+  i
+    color: #ddd
+
+
+.copy_msg
+  display: none
+  text-align: center
+  background: $accent_col_rgba
+.copy_msg.show
+  display: block
+
+@media(max-width: 505px)
+  .action_btn.right
+    order: 3
+    border-radius: 10px 0px 8px 0px
+
+  .action_btn.left
+    order: 2
+    border-radius: 0px 10px 0px 8px
+  .contact-wrapper
+    flex-wrap: wrap
+    p
+      width: 100%
+      text-align: center
