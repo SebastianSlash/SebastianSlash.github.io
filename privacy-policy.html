@@ -8,7 +8,7 @@ last-updated: 2020-12-01
   <div class="sidebar left"></div>
   <div class="privacy content">
     <h1>Privacy Notice</h1>
-    <p class="last-updated">Last updated {{ page.last-updated | date_to_string }}</p>
+    <p class="last-updated">Last updated {{ page.last-updated | date: "%B %d, %Y" }}</p>
     <div class="privacy introduction">
       {% for item in site.data.privacyNotice.intro %}
         {% for i in (0..item.part-count) %}
