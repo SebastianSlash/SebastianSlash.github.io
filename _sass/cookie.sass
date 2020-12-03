@@ -5,7 +5,7 @@
   //min-height: 15%
   height: auto
   width: 100%
-  padding: 3%
+  padding: 15px
   background: rgba(20, 20, 20, 0.9)
   align-items: baseline
   justify-content: space-around
@@ -19,6 +19,7 @@
   p
     color: white
     max-width: 100%
+    padding-bottom: 0.5%
   .btn
     background: $accent_col_rgb
     border-radius: 8px
@@ -33,6 +34,10 @@
     background: rgba(20, 20, 20, 0.2)
     color: $accent_col_rgb
 
+@media (min-width: 1510px)
+  .content.cookie-notice
+    padding: 20px
+
 .content.cookie-notice.no-backdrop
   background: rgba(20, 20, 20, 1)
 
@@ -42,6 +47,7 @@
 
 .cookie-notice.buttons
   flex-basis: 450px
+  padding-top: 0.5%
   display: flex
   flex-wrap: wrap
   justify-content: space-evenly
