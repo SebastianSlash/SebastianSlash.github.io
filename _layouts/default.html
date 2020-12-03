@@ -11,12 +11,12 @@
 		{% include navigation.html %}
 		{{ content }}
 		{% include footer.html %}
-		{% include cookie-consent.html %}
+		<!-- {% include cookie-consent.html %} -->
 
 		<!-- Scripts -->
 		<script src="/assets/js/app.js"></script>
-		<script src="/assets/js/feature_detection.js"></script>
-		<script src="/assets/js/cookie-consent.js"></script>
+		<!-- <script src="/assets/js/feature_detection.js"></script>
+		<script src="/assets/js/cookie-consent.js"></script> -->
 		{% if page.class == "home" %}<script src="/assets/js/home_observer.js"></script>{% endif %}
 		{% if page.class == "contact" %}<script src="/assets/js/copy.js"></script>{% endif %}
 	</body>
