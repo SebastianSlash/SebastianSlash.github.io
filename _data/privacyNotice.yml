@@ -6,11 +6,11 @@ intro:
           Thank you for choosing to be part of our community at Sebastian Bellitto ("Company", "we", "us", "our").
           We are committed to protecting your personal information and your right to privacy.
           If you have any questions or concerns about this privacy notice, or our practices with regards to your personal information,
-          please contact us at<a class="link" href="mailto:privacy@sebastianbellitto.com">privacy@sebastianbellitto.com</a>.
+          please contact us at <a class="special-link" href="mailto:privacy@sebastianbellitto.com">privacy@sebastianbellitto.com</a>.
       - number: 1
         text: |
           When you visit our website
-          <a href="https://www.sebastianbellitto.com" class="link">https://www.sebastianbellitto.com</a>(the "Website"),
+          <a href="https://www.sebastianbellitto.com" class="special-link">https://www.sebastianbellitto.com</a>(the "Website"),
           and more generally, use any of our services (the "Services", which include the Website),
           we appreciate that you are trusting us with your personal information.
           We take your privacy very seriously. In this privacy notice, we seek to explain to you in the clearest way possible
@@ -135,7 +135,7 @@ sections:
           and any usage Data collected through cookies is stored on Google Servers. If you are accessing our Website from outside,
           please be aware that your information may be transferred to, stored,
           and processed by us in our facilities and by those third parties with whom we may share your personal information
-          (see "WILL YOUR INFORMATION BE SHARED WITH ANYONE?" above), in and other countries.
+          (see "<a href="#prv-03" class="special-link">Will your information be shared with anyone?</a>" above), in and other countries.
       - type: text
         content: |
           If you are a resident in the European Economic Area, then these countries may not necessarily have data protection laws
@@ -182,7 +182,7 @@ sections:
           to such minor dependent’s use of the Website. If we learn that personal information from users less than 18 years of age
           has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records.
           If you become aware of any data we may have collected from children under age 18,
-          please contact us at<a class="link" href="mailto:privacy@sebastianbellitto.com">privacy@sebastianbellitto.com</a>.
+          please contact us at <a class="special-link" href="mailto:privacy@sebastianbellitto.com">privacy@sebastianbellitto.com</a>.
   - title: What are your privacy rights?
     id: prv-09
     short: You may review, change, or terminate your account at any time.
@@ -192,11 +192,11 @@ sections:
           If you are a resident in the European Economic Area and you believe we are unlawfully processing your personal information,
           you also have the right to complain to your local data protection supervisory authority.
           You can find their contact details
-          here: http://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm.
+          here: <a href="http://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm" class="special-link">http://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm</a>.
       - type: text
         content: |
           If you are a resident in Switzerland, the contact details for the data protection authorities are available
-          here:<a href="https://www.edoeb.admin.ch/edoeb/en/home.html" class="link">https://www.edoeb.admin.ch/edoeb/en/home.html</a>.
+          here: <a href="https://www.edoeb.admin.ch/edoeb/en/home.html" class="special-link">https://www.edoeb.admin.ch/edoeb/en/home.html</a>.
       - type: text
         content: |
           <span class="bold">Cookies and similar technologies:</span> Most Web browsers are set to accept cookies by default.
@@ -253,7 +253,7 @@ sections:
       - type: text
         content: |
           If you have questions or comments about this notice, you may email us
-          at<a class="link" href="mailto:privacy@sebastianbellitto.com">privacy@sebastianbellitto.com</a>.
+          at <a class="special-link" href="mailto:privacy@sebastianbellitto.com">privacy@sebastianbellitto.com</a>.
   - title: How can you review, update, or delete the data we collected from you?
     id: prv-14
     short: None
@@ -263,5 +263,5 @@ sections:
           Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you,
           change that information, or delete it in some circumstances.
           To request to review, update, or delete your personal information.
-          Please submit a request to<a class="link" href="mailto:privacy@sebastianbellitto.com">privacy@sebastianbellitto.com</a>.
+          Please submit a request to <a class="special-link" href="mailto:privacy@sebastianbellitto.com">privacy@sebastianbellitto.com</a>.
           We will try respond to your request within 30 days.
