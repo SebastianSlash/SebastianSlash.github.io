@@ -3,8 +3,10 @@ layout: default
 class: blog
 ---
 <div class="wrapper bloghome">
-  <div class="sidebar left"></div>
+
   <div class="blog_home {{ page.css_id }}">
+    <div class="sidebar left"></div>
+
     <h1>{{ page.blog_name }}</h1>
     <!-- <h2 class="author">Author: {{ page.author_name }}</h2> -->
 
@@ -14,12 +16,37 @@ class: blog
     <ul>
       {% assign filtered_posts = site.posts | where: 'blogtype', page.b_type %}
       {% for post in filtered_posts %}
-        <li>
-          <span>{{ post.date | date_to_string }}</span> » <a class="special-link" href="{{ post.url }}">{{ post.title }}</a>
-          <p>{{ post.excerpt }}</p>
-        </li>
+
+        {% if post.featured-image %}
+
+        <li class="article-card card-with-img" onclick="location.href = '{{ post.url }}';" style="background-image: url({{ post.img-dir }}{{ post.featured-image }}); background-size: cover; background-position: center center">
+          <span class="card-header card-date">{{ post.date | date_to_string }}</span><span class="card-header card-title">{{ post.title }}</span>
+
+          {% if post.abstract %}
+            <p class="card-excerpt defined hidden">
+              {{ post.abstract }}
+            </p>
+          {% else %}
+            <div class="card-excerpt automatic hidden">
+              {{ post.excerpt }}
+            </div>
+          {% endif %}
+
+        {% else %}
+          <li class="article-card" onclick="location.href = '{{ post.url }}';">
+            <span class="card-header card-date">{{ post.date | date_to_string }}</span><span class="card-header card-title">{{ post.title }}</span>
+            {% if post.abstract %}
+              <p class="card-excerpt defined">{{ post.abstract }}</p>
+            {% else %}
+              <p class="card-excerpt automatic">{{ post.excerpt }}</p>
+            {% endif %}
+          </li>
+        {% endif %}
+
       {% endfor %}
     </ul>
+
+    <div class="sidebar right"></div>
   </div>
-  <div class="sidebar right"></div>
+
 </div>

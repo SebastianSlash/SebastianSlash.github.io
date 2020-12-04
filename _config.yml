@@ -1,5 +1,6 @@
 name: Sebastian Bellitto
 markdown: kramdown
+# highlighter: coderay
 permalink: /blog/:year/:month/:day/:title
 
 collections:

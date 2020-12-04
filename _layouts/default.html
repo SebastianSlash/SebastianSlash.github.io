@@ -19,5 +19,17 @@
 		<script src="/assets/js/cookie-consent.js"></script> -->
 		{% if page.class == "home" %}<script src="/assets/js/home_observer.js"></script>{% endif %}
 		{% if page.class == "contact" %}<script src="/assets/js/copy.js"></script>{% endif %}
+		{% if page.blogtype == "tech" %}
+			<link rel="stylesheet" href="/assets/highlight/styles/an-old-hope.css">
+			<script src="/assets/highlight/highlight.pack.js"></script>
+			<script>
+				document.addEventListener('DOMContentLoaded', (event) => {
+					document.querySelectorAll('pre code').forEach((block) => {
+						hljs.highlightBlock(block);
+					});
+				});
+			</script>
+		{% endif %}
+
 	</body>
 </html>

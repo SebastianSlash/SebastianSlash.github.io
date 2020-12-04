@@ -1,51 +1,37 @@
-.wrapper.bloghome
-  display: flex
-  justify-content: center
+// ================================================================================================================
+// MAIN CONTENT
+// ================================================================================================================
 
-  .sidebar
-    background: white
-    margin-top: 400px
-    flex-basis: 0px
-    flex-shrink: 0
-    flex-grow: 1
-
-.blog_home
-  justify-self: center
-  background-color: white
-  padding: 20px 30px 20px 30px
-  margin-top: 80px
-
-  h1
-    text-align: center
-  .author
-    font-weight: normal
-
-.blog_content
-  //max-width: 600px
-  // margin-top: 80px
-  // z-index: 1
-  //box-shadow: -6px 0px 15px -10px rgba(0, 0, 0, 0.2), 6px 0px 15px -10px rgba(0, 0, 0, 0.19)
-
-  display: flex
-  justify-content: center
-
-  .sidebar
-    background: white
-    margin-top: 400px
-    flex-basis: 0px
-    flex-shrink: 0
-    flex-grow: 1
+.wrapper.blog
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: minmax(80px, auto) repeat(2, auto)
+  grid-template-areas: "feat" "post" "up"
 
 .post-meta
   color: #444
   a
     color: inherit
+.article_title
+  text-align: center
 
-.blog_article
-  background-color: white
-  padding: 20px 30px 20px 30px
-  margin-top: 400px
-  flex-basis: 671px
+.blog_article,
+.blog_home
+  h1,
+  h2,
+  h3,
+  h4,
+  a,
+  p,
+  br,
+  ol,
+  ul,
+  li,
+  code,
+  span,
+  div[class^="language"], div[class*=" language"],
+  div[class*="highlight"],
+    grid-column: 2 / 3
 
   h1
     font: $h1_blog
@@ -56,109 +42,183 @@
 
   a
     font: $font_blog
-    max-width: 600px
   p
     font: $font_blog
-    max-width: 610px
     line-height: 1.5
-    // font-weight: 400
     padding-bottom: 1em
-
-  img
-    max-width: 600px
 
   br
     display: block
     content: ""
     margin-top: 0.5em
 
+  .sidebar.left
+    grid-column: 1 / 2
+  .sidebar.right
+    grid-column: 3 / 4
+  .sidebar
+    grid-row: 1 / -1
+    width: auto
+
+  grid-area: post
+  background: white
+  padding-top: 4vh
+
+  display: grid
+  grid-template-columns: minmax(15px, auto) minmax(10px, 650px) minmax(15px, auto)
+  grid-template-rows: auto
+
+
+.post-gallery
+  grid-column: 1 / 4
+  justify-self: center
+  padding: 0.5em 0 1.5em 0
+  //following width adjusts the width of the gallery on the page. should probably be given with the photos or so
+  max-width: 90vw
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+  grid-gap: 10px
+  img
+    width: 100%
+
+.imgal.portrait
+  grid-row: 1 / -3
+  align-self: stretch
+
+.imgal.landscape
+  grid-column: 1 / -1
+
+div[class^="language"]
+  margin: 1em 0
+  .highlight
+    padding: 0.5em
+  //background: rgba(20, 20, 20, 0.10)
+  border-radius: 8px
+  overflow: auto
+
 code
   font: $font_code
   background: rgba(20, 20, 20, 0.10)
-  // padding-left: 7px
-  // padding-right: 7px
-  // padding-bottom: 2px
-  // padding-top: 2px
-  // border-radius: 3px
   padding-top: 0.1rem
   padding-right: 0.3rem
   padding-bottom: 0.2rem
   padding-left: 0.3rem
   border-radius: 0.2rem
 
+//   &:before
+//     counter-increment: line
+//     content: counter(line)
+//     display: inline-block
+//     border-right: 1px solid #ddd
+//     padding: 0 .5em
+//     margin-right: .5em
+//     color: #888
+//
+// pre
+//   counter-reset: line
+// span
+//     //display: block
+//     //line-height: 1.5rem
+//
 
+
+
+.abstract
+  border-style: solid
+  border-width: 0px 0px 0px 7px
+  border-radius: 3px
+  border-color: $accent_col_rgba
+  padding-left: 15px
+  margin-left: calc(calc(100vw - 650px) * -0.05)
+  margin-bottom: 2.5em
+  margin-top: 1em
+
+p.abstract
+  padding-bottom: 0
+  font: $p_base
+  font-weight: bold
+  line-height: 1.5
+
+
+// ================================================================================================================
+// ================================================================================================================
+// POST GALLERY
+// ================================================================================================================
+.blog_home
+  li
+    margin: 2%
+.article-card
+  //border-style: solid
+  border-radius: 8px
+  padding: 4% 18px 0px 18px
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.3)
+  margin-bottom: 20px
+  cursor: pointer
+  transition: all 0.2s ease-in
+.article-card.card-with-img
+  height: 250px
+
+.card-date
+  display: inline-block
+  // height: 30px
+  // padding: 0px 15px 4px 18px
+  // margin-right: 5px
+  // clip-path: polygon(96% 24px, 100% 12px, 96% 0px, 0px 0px, 10px 12px, 0px 24px)
+  // transition: all 0.2s ease-in
+.card-title
+  display: inline-block
+  background: $accent_col_rgba
+  font: $font_card
+  height: 32px
+  padding: 0px 20px 4px 18px
+  margin-left: 5px
+  clip-path: polygon(96% 26px, 98% 13px, 96% 0px, 0px 0px, 10px 13px, 0px 26px)
+.article-card:hover
+  margin: 2% 0%
+  padding: 6% calc(18px + 2%) 2% calc(18px + 2%)
+  transition: all 0.2s ease-out
+  .card-date
+    // display: inline-block
+    // background: $accent_col_rgba
+    transition: all 0.2s ease-out
+
+// .card-excerpt.hidden
+//   p
+//     color: transparent
+//   a
+//     color: inherit
+// .card-excerpt.hidden:hover
+//   p
+//     color: black
+//   a
+//     color: inherit
+
+// ================================================================================================================
+// ================================================================================================================
+// THIS WORKS
+// ================================================================================================================
 
 .feat-img
+  grid-area: feat
   position: fixed
-  // top: 80px
   z-index: -1
   height: 400px
   width: 100vw
-  //max-width: 600px
   overflow: hidden
-  // img
-  //   margin-top: -315px
 
 .feat-img-spacer
+  grid-area: feat
   height: 400px
 
 .goUp
-  margin: 8% 0% 3% 0%
+  grid-area: up
+  padding: 8% 0% 3% 0%
   width: 100%
+  background: white
   display: flex
   justify-content: center
   i
     color: $accent_col_rgb
   i:hover
     transform: scale(1.2)
-
-// @media (min-width: 1000px)
-//   .blog_content
-//     max-width: 900px
-//   p
-//     max-width: 900px
-//   img
-//     max-width: 900px
-//
-//   .feat-img
-//     max-width: 900px
-//     img
-//       margin-top: -185px
-//
-//   .post-gallery
-//     max-width: 900px
-// .wrapper.blog
-//   // margin-bottom: 144px
-
-// .wrapper.blog::after
-//   content: ""
-//   position: fixed
-//   width: 100vw
-//   height: 100vh
-//   // margin-bottom: 144px         tryed to make the footer parallax reveal
-//   // background-image: url(/assets/images/bg_adventure.jpg)
-//   z-index: -1
-//   background-position: center center
-//   background-repeat: no-repeat
-//   background-attachment: fixed
-//   background-size: cover
-//   opacity: 0.5
-// .wrapper.blog::before
-//   content: ""
-//   position: fixed
-//   width: 100vw
-//   height: 100vh
-//   background: white
-//   z-index: -2
-//
-// //styles blog overview
-// .wrapper.blog_adventure::after
-//   background-image: url(/assets/images/bg_adventure.jpg)
-// .wrapper.blog_tech::after
-//   background-image: url(/assets/images/bg_tech.jpg)
-//
-// //styles blog posts
-// .wrapper.adventure::after
-//   background-image: url(/assets/images/bg_adventure.jpg)
-// .wrapper.tech::after
-//   background-image: url(/assets/images/bg_tech.jpg)
