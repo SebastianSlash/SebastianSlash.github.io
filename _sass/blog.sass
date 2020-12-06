@@ -31,7 +31,8 @@
   span,
   div[class^="language"], div[class*=" language"],
   div[class*="highlight"],
-  div.article-list
+  div.article-list,
+  div.social-share
     grid-column: 2 / 3
 
   h1
@@ -134,7 +135,7 @@ p.abstract
 
 // ================================================================================================================
 // ================================================================================================================
-// POST GALLERY
+// ARTICLE LIST
 // ================================================================================================================
 
 .article-card
@@ -199,19 +200,12 @@ p.abstract
 
 .article-card:hover
   transform: scale(1.05)
-  //height: calc(250px + 4%)
-  //margin: 0px 0px 20px 0px
-  //padding: 4% calc(18px + 2%) 0px calc(18px + 2%)
-  //margin: 2% 0%
-  //padding: 6% calc(18px + 2%) 2% calc(18px + 2%)
   transition: all 0.2s ease-in-out
   p
     font: $font_card_hover
     line-height: 1.5em
 
 .article-card.card-with-img:hover
-  // .excerpt-overlay
-  //   padding: 4% calc(18px + 2%) 4px calc(18px + 2%)
   // add .no-backdrop if backdrop starts working
   .excerpt-overlay
     background: rgba(200, 180, 200, 0.75)
@@ -223,20 +217,6 @@ p.abstract
     display: inline-block
     visibility: visible
     opacity: 1
-
-
-
-
-// .card-excerpt.hidden
-//   p
-//     color: transparent
-//   a
-//     color: inherit
-// .card-excerpt.hidden:hover
-//   p
-//     color: black
-//   a
-//     color: inherit
 
 // ================================================================================================================
 // ================================================================================================================
@@ -292,3 +272,50 @@ p.abstract
     font-family: "Font Awesome 5 Free"
     font-weight: 400
     content: "\f0c8"
+
+// ================================================================================================================
+// ================================================================================================================
+// SOCIAL SHARE LINKS
+// ================================================================================================================
+.social-share
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding-top: 14px
+  margin-top: -1em
+.social-share.show
+  background: #ddd
+  border-radius: 8px
+  //padding-top: 14px
+  margin-bottom: 1em
+  box-shadow: inset 0px 0px 5px 3px #ccc
+.share-expand
+  padding: 10px
+  margin-bottom: 4%
+  border-radius: 8px
+  background: #ccc
+  color: #444
+  // box-shadow: 0px 0px 5px 1px rgba(10, 10, 10, 0.4)
+.share-expand.show
+  color: #666
+  background: #ddd
+.share-links
+  display: none
+.share-links.show
+  li
+    all: unset
+  display: flex
+  justify-content: space-around
+  width: 100%
+  padding: calc(10px * calc(4% / 100))
+
+
+
+  .fa-linkedin
+    color: #2867B2
+  .fa-facebook
+    color: #4267B2
+  .fa-twitter
+    color: #1DA1F2
+  .fa-reddit
+    color: #FF5700
