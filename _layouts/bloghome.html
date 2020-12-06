@@ -12,41 +12,56 @@ class: blog
 
     {{ content }}
 
-    <h2>Posts</h2>
-    <ul>
+    <h2 id="list-start">Posts</h2>
+    <div class="article-list">
       {% assign filtered_posts = site.posts | where: 'blogtype', page.b_type %}
       {% for post in filtered_posts %}
-
         {% if post.featured-image %}
 
-        <li class="article-card card-with-img" onclick="location.href = '{{ post.url }}';" style="background-image: url({{ post.img-dir }}{{ post.featured-image }}); background-size: cover; background-position: center center">
-          <span class="card-header card-date">{{ post.date | date_to_string }}</span><span class="card-header card-title">{{ post.title }}</span>
+          <div class="article-card card-with-img" onclick="location.href = '{{ post.url }}';" style="background-image: url({{ post.img-dir }}{{ post.featured-image }}); background-size: cover; background-position: center center">
+            <div class="excerpt-overlay">
+              <div class="card-header">
+                <span class="card-date">{{ post.date | date_to_string }}</span>
+                <span class="card-title">{{ post.title }}</span>
+              </div>
 
-          {% if post.abstract %}
-            <p class="card-excerpt defined hidden">
-              {{ post.abstract }}
-            </p>
-          {% else %}
-            <div class="card-excerpt automatic hidden">
-              {{ post.excerpt }}
+              {% if post.abstract %}
+                <div class="card-excerpt defined hidden">
+                  {{ post.abstract }}
+                </div>
+              {% else %}
+                <div class="card-excerpt automatic hidden" id="the-text">
+                  {{ post.excerpt }}
+                </div>
+              {% endif %}
             </div>
-          {% endif %}
+          </div>
 
         {% else %}
-          <li class="article-card" onclick="location.href = '{{ post.url }}';">
-            <span class="card-header card-date">{{ post.date | date_to_string }}</span><span class="card-header card-title">{{ post.title }}</span>
+          <div class="article-card card-no-img" onclick="location.href = '{{ post.url }}';">
+            <div class="card-header">
+              <span class="card-date">{{ post.date | date_to_string }}</span>
+              <span class="card-title">{{ post.title }}</span>
+            </div>
             {% if post.abstract %}
-              <p class="card-excerpt defined">{{ post.abstract }}</p>
+              <div class="card-excerpt defined">
+                {{ post.abstract }}
+              </div>
             {% else %}
-              <p class="card-excerpt automatic">{{ post.excerpt }}</p>
+              <div class="card-excerpt automatic">
+                {{ post.excerpt }}
+              </div>
             {% endif %}
-          </li>
+          </div>
         {% endif %}
-
       {% endfor %}
-    </ul>
+    </div>
+
 
     <div class="sidebar right"></div>
+  </div>
+  <div class="goUp">
+    <a href="#list-start"><i class="fas fa-chevron-circle-up fa-2x"></i></a>
   </div>
 
 </div>

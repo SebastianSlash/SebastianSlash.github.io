@@ -47,18 +47,6 @@ After editing it will finish up and you'll have a new `.pkg.tar.xz` package in t
 ```bash
 $ sudo pacman -U packagename.pkg.tar.xz
 ```
-```python
-def arrToDf(arr, row1asCol=True, col1asIdx=False):
-    cols = None
-    idx = None
-    if row1asCol:
-        cols = arr[0,:]
-        arr = np.delete(arr, 0, 0)
-    if col1asIdx:
-        idx = arr[:,0]
-        arr = np.delete(arr, 0, 1)
-    return pd.DataFrame(arr, index=idx, columns=cols)
-```
 <h2 id="step-three">Updates</h2>
 Shortly after installing Alfaview on my Arch system there was an update aviable, the package you could download from ther page was still the old version though.<br>
 It seems like they just need a little bit of time to update their download link.<br>

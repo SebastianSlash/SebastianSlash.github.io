@@ -31,6 +31,7 @@
   span,
   div[class^="language"], div[class*=" language"],
   div[class*="highlight"],
+  div.article-list
     grid-column: 2 / 3
 
   h1
@@ -44,8 +45,10 @@
     font: $font_blog
   p
     font: $font_blog
-    line-height: 1.5
+    line-height: 1.5em
     padding-bottom: 1em
+  li
+    font: $font_blog
 
   br
     display: block
@@ -68,6 +71,12 @@
   grid-template-columns: minmax(15px, auto) minmax(10px, 650px) minmax(15px, auto)
   grid-template-rows: auto
 
+.blog_article
+  li
+    list-style: disc
+  li.task-list-item
+    list-style: none
+    margin-left: 2%
 
 .post-gallery
   grid-column: 1 / 4
@@ -98,30 +107,13 @@ div[class^="language"]
 
 code
   font: $font_code
-  background: rgba(20, 20, 20, 0.10)
-  padding-top: 0.1rem
+  background: $code_bg
+  color: $code_text_col
+  padding-top: 0.05rem
   padding-right: 0.3rem
-  padding-bottom: 0.2rem
-  padding-left: 0.3rem
+  padding-bottom: 0.1rem
+  padding-left: 0.2rem
   border-radius: 0.2rem
-
-//   &:before
-//     counter-increment: line
-//     content: counter(line)
-//     display: inline-block
-//     border-right: 1px solid #ddd
-//     padding: 0 .5em
-//     margin-right: .5em
-//     color: #888
-//
-// pre
-//   counter-reset: line
-// span
-//     //display: block
-//     //line-height: 1.5rem
-//
-
-
 
 .abstract
   border-style: solid
@@ -144,44 +136,95 @@ p.abstract
 // ================================================================================================================
 // POST GALLERY
 // ================================================================================================================
-.blog_home
-  li
-    margin: 2%
+
 .article-card
-  //border-style: solid
   border-radius: 8px
-  padding: 4% 18px 0px 18px
+  height: 250px
+  //padding: 4% 18px 0px 18px
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.3)
+  padding: 4% 20px 0 20px
   margin-bottom: 20px
   cursor: pointer
   transition: all 0.2s ease-in
-.article-card.card-with-img
-  height: 250px
+  p
+    font: $font_card
+    line-height: 1.5em
 
-.card-date
-  display: inline-block
-  // height: 30px
-  // padding: 0px 15px 4px 18px
-  // margin-right: 5px
-  // clip-path: polygon(96% 24px, 100% 12px, 96% 0px, 0px 0px, 10px 12px, 0px 24px)
-  // transition: all 0.2s ease-in
+.article-card.card-with-img
+  padding: 0px
+.article-card.card-no-img
+  padding: 4% calc(18px + 2%) 0px calc(18px + 2%)
+
 .card-title
   display: inline-block
-  background: $accent_col_rgba
-  font: $font_card
+  background: $accent_col_rgb
+  color: $code_text_col
+  font: $font_card_header
+  font-weight: bold
+  height: 32px
+  padding: 0px 20px 4px 18px
+  margin-left: -11px
+  clip-path: polygon(96% 26px, 98% 13px, 96% 0px, 0px 0px, 10px 13px, 0px 26px)
+.card-date
+  display: inline-block
+  color: $code_text_col
+  background: $code_bg
+  font: $font_card_header
   height: 32px
   padding: 0px 20px 4px 18px
   margin-left: 5px
-  clip-path: polygon(96% 26px, 98% 13px, 96% 0px, 0px 0px, 10px 13px, 0px 26px)
+  clip-path: polygon(94% 26px, 100% 13px, 94% 0px, 0px 0px, 0px 13px, 0px 26px)
+
+.card-excerpt
+  // height: 8em
+  padding: 0.6em 0 0 0
+  overflow: hidden
+  display: inline-block
+  height: 77%
+
+.excerpt-overlay
+  border-radius: 8px
+  //padding: 4% 20px
+  // padding: 4% 18px 4% 18px
+  padding: 4% calc(18px + 2%) 0px calc(18px + 2%)
+  height: inherit
+  background: rgba(200, 180, 200, 0.0)
+  transition: background 0.5s ease-in-out
+
+.card-excerpt.hidden
+  visibility: hidden
+  opacity: 0
+  transition: visibility 0s, opacity 0.5s ease-in-out
+
 .article-card:hover
-  margin: 2% 0%
-  padding: 6% calc(18px + 2%) 2% calc(18px + 2%)
-  transition: all 0.2s ease-out
-  .card-date
-    // display: inline-block
-    // background: $accent_col_rgba
-    transition: all 0.2s ease-out
+  transform: scale(1.05)
+  //height: calc(250px + 4%)
+  //margin: 0px 0px 20px 0px
+  //padding: 4% calc(18px + 2%) 0px calc(18px + 2%)
+  //margin: 2% 0%
+  //padding: 6% calc(18px + 2%) 2% calc(18px + 2%)
+  transition: all 0.2s ease-in-out
+  p
+    font: $font_card_hover
+    line-height: 1.5em
+
+.article-card.card-with-img:hover
+  // .excerpt-overlay
+  //   padding: 4% calc(18px + 2%) 4px calc(18px + 2%)
+  .excerpt-overlay.no-backdrop
+    background: rgba(200, 180, 200, 0.75)
+  .excerpt-overlay.backdrop
+    background: rgba(200, 180, 200, 0.6)
+    backdrop-filter: blur(1px)
+
+  .card-excerpt.hidden
+    display: inline-block
+    visibility: visible
+    opacity: 1
+
+
+
 
 // .card-excerpt.hidden
 //   p
@@ -213,7 +256,7 @@ p.abstract
 
 .goUp
   grid-area: up
-  padding: 8% 0% 3% 0%
+  padding: 8vh 0vh 3vh 0vh
   width: 100%
   background: white
   display: flex
@@ -222,3 +265,29 @@ p.abstract
     color: $accent_col_rgb
   i:hover
     transform: scale(1.2)
+
+
+
+  /* Step 1: Common Properties: All required to make icons render reliably */
+.task-list-item
+  input[type="checkbox"]
+    all: unset
+  input[type="checkbox"]::before
+    display: inline-block
+    font-style: normal
+    font-variant: normal
+    text-rendering: auto
+    -webkit-font-smoothing: antialiased
+    margin-right: 0.4em
+    color: $accent_col_rgb
+
+
+  /* Step 2: Reference Individual Icons */
+  input[type="checkbox"]:checked::before
+    font-family: "Font Awesome 5 Free"
+    font-weight: 900
+    content: "\f14a"
+  input[type="checkbox"]:not(:checked)::before
+    font-family: "Font Awesome 5 Free"
+    font-weight: 400
+    content: "\f0c8"

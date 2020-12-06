@@ -1,5 +1,5 @@
-function check_backdrop() {
-  const conditional = document.querySelector('.cookie-notice');
+function check_backdrop(backdrop_class) {
+  const conditional = document.querySelector(backdrop_class);
   const testElem = document.createElement('div');
   if (testElem.style.backdropFilter !== undefined) {
     conditional.classList.toggle("backdrop");
