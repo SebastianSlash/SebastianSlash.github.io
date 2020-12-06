@@ -26,8 +26,7 @@ galleries:
     - { url: 'orbit360bw_16.jpg', alt: 'boooh'}
     - { url: 'orbit360bw_17.jpg', alt: 'boooh'}
 ---
-
-On Friday the 17th of July I set out to ride the Baden-Württemberg route from the Orbit 360 Gravel series.<br>
+On Friday the 17th of July I set out to ride the Baden-Württemberg route from the <a href="https://orbit360.cc" class="special-link">Orbit 360</a> Gravel series.<br>
 It is a course of 250 km and 4000 m of climbing. The longest ride I had done so far was 170 km in the flats and the most comparable 162 km with 2300 m of climbing. So I was really excited and interested in seeing how I would fare. This year I was also lagging behind in training and I think this was the cause of something I will talk about later in this article.<br>
 
 ## The Gear

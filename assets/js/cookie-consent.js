@@ -25,7 +25,7 @@ if(readCookie('cookie-notice-dismissed')=='true') {
   console.log('Cookie consent was given');
   } else {
     document.getElementById('cookie-notice').style.display = 'flex';
-    check_backdrop();
+    check_backdrop('.cookie-notice');
 }
 document.getElementById('cookie-notice-accept').addEventListener("click",function() {
     createCookie('cookie-notice-dismissed','true',31);

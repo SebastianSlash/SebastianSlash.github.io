@@ -1,0 +1,123 @@
+// ================================================================================================================
+// MAIN CONTENT
+// ================================================================================================================
+
+.wrapper.test
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 400px repeat(2, auto)
+  grid-template-areas: "feat" "post" "up"
+
+.post-meta
+  color: #444
+  a
+    color: inherit
+
+.blog_article
+
+  h1
+    font: $h1_blog
+    grid-column: 2 / 3
+
+  h2
+    font: $h2_blog
+    font-weight: bold
+    grid-column: 2 / 3
+
+  a
+    font: $font_blog
+    grid-column: 2 / 3
+  p
+    font: $font_blog
+    line-height: 1.5
+    padding-bottom: 1em
+    grid-column: 2 / 3
+
+  br
+    display: block
+    content: ""
+    margin-top: 0.5em
+
+  .sidebar.left
+    grid-column: 1 / 2
+  .sidebar.right
+    grid-column: 3 / 4
+  .sidebar
+    grid-row: 1 / -1
+    width: auto
+
+  grid-area: post
+  background: white
+
+  display: grid
+  grid-template-columns: minmax(15px, auto) minmax(10px, 650px) minmax(15px, auto)
+  grid-template-rows: auto
+
+
+.post-gallery
+  grid-column: 1 / 4
+  justify-self: center
+  padding: 0.5em 0 1.5em 0
+  //following width adjusts the width of the gallery on the page. should probably be given with the photos or so
+  max-width: 90vw
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+  grid-gap: 10px
+  img
+    width: 100%
+
+.imgal.portrait
+  grid-row: 1 / -3
+  align-self: stretch
+
+.imgal.landscape
+  grid-column: 1 / -1
+
+
+code
+  font: $font_code
+  background: rgba(20, 20, 20, 0.10)
+  // padding-left: 7px
+  // padding-right: 7px
+  // padding-bottom: 2px
+  // padding-top: 2px
+  // border-radius: 3px
+  padding-top: 0.1rem
+  padding-right: 0.3rem
+  padding-bottom: 0.2rem
+  padding-left: 0.3rem
+  border-radius: 0.2rem
+// ================================================================================================================
+// ================================================================================================================
+// POST GALLERY
+// ================================================================================================================
+.test
+
+// ================================================================================================================
+// ================================================================================================================
+// THIS WORKS
+// ================================================================================================================
+
+.feat-img
+  grid-area: feat
+  position: fixed
+  z-index: -1
+  height: 400px
+  width: 100vw
+  overflow: hidden
+
+.feat-img-spacer
+  grid-area: feat
+  height: 400px
+
+.goUp
+  grid-area: up
+  padding: 8% 0% 3% 0%
+  width: 100%
+  background: white
+  display: flex
+  justify-content: center
+  i
+    color: $accent_col_rgb
+  i:hover
+    transform: scale(1.2)

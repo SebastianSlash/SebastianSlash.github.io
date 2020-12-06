@@ -3,29 +3,47 @@ layout: default
 class: blog
 ---
 <div class="wrapper blog {{ page.blogtype }}">
-  <div class="blog_content">
+
     {% if page.featured-image %}
       {% include post-featured-image.html image=page.featured-image alt=page.featured-image-alt directory=page.img-dir %}
       <div class="feat-img-spacer"></div>
     {% endif %}
-    <div class="sidebar left"></div>
+
     <div class="blog_article">
+      <div class="sidebar left"></div>
+
       <h1 id="01_heading" class="article_title">{{ page.title }}</h1>
       <p class="post-meta">
         {{ page.date | date_to_string }} | {{ page.author }}
         {% assign blog = site.blogtype | where: 'b_type', page.blogtype | first %}
         {% if blog %}
-          - <a href="{{ blog.url }}">{{ blog.blog_name }}</a>
+          - <a href="{{ blog.url }}" class="link">{{ blog.blog_name }}</a>
         {% endif %}
+        <br><br>
       </p>
-      <p><br></p>
-      <div class="post">
-        {{ content }}
+      <div class="social-share">
+        <a href="javascript:;" class="share-expand"><i class="fas fa-share-alt fa-lg"></i></a>
+        <ul class="share-links">
+          <li class="social-share-icon"><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsebastianbellitto.com{{ page.url | url_encode }}" target="blank"><i class="fab fa-linkedin fa-lg"></i></a></li>
+          <li class="social-share-icon"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsebastianbellitto.com{{ page.url | url_encode }}" target="blank"><i class="fab fa-facebook fa-lg"></i></a></li>
+          <li class="social-share-icon"><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsebastianbellitto.com{{ page.url | url_encode }}&text={{ page.title | url_encode}}{% if page.tags %}{{ page.tags | url_encode }}{% endif %}" target="blank"><i class="fab fa-twitter fa-lg"></i></a></li>
+          <li class="social-share-icon"><a href="http://www.reddit.com/submit?url=https%3A%2F%2Fsebastianbellitto.com{{ page.url | url_encode }}&title={{ page.title | url_encode}}" target="blank"><i class="fab fa-reddit fa-lg"></i></a></li>
+        </ul>
       </div>
-      <div class="goUp">
-        <a href="#01_heading"><i class="fas fa-chevron-circle-up fa-2x"></i></a>
-      </div>
+      {% if page.abstract %}
+        <p class="abstract">
+          {{ page.abstract }}
+        </p>
+      {% endif %}
+
+      {{ content }}
+
+      <div class="sidebar right"></div>
     </div>
-    <div class="sidebar right"></div>
-  </div>
+
+    <div class="goUp">
+      <a href="#01_heading"><i class="fas fa-chevron-circle-up fa-2x"></i></a>
+    </div>
+
+
 </div>

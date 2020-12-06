@@ -3,23 +3,65 @@ layout: default
 class: blog
 ---
 <div class="wrapper bloghome">
-  <div class="sidebar left"></div>
+
   <div class="blog_home {{ page.css_id }}">
+    <div class="sidebar left"></div>
+
     <h1>{{ page.blog_name }}</h1>
     <!-- <h2 class="author">Author: {{ page.author_name }}</h2> -->
 
     {{ content }}
 
-    <h2>Posts</h2>
-    <ul>
+    <h2 id="list-start">Posts</h2>
+    <div class="article-list">
       {% assign filtered_posts = site.posts | where: 'blogtype', page.b_type %}
       {% for post in filtered_posts %}
-        <li>
-          <span>{{ post.date | date_to_string }}</span> » <a class="special-link" href="{{ post.url }}">{{ post.title }}</a>
-          <p>{{ post.excerpt }}</p>
-        </li>
+        {% if post.featured-image %}
+
+          <div class="article-card card-with-img" onclick="location.href = '{{ post.url }}';" style="background-image: url({{ post.img-dir }}{{ post.featured-image }}); background-size: cover; background-position: center center">
+            <div class="excerpt-overlay">
+              <div class="card-header">
+                <span class="card-date">{{ post.date | date_to_string }}</span>
+                <span class="card-title">{{ post.title }}</span>
+              </div>
+
+              {% if post.abstract %}
+                <div class="card-excerpt defined hidden">
+                  {{ post.abstract }}
+                </div>
+              {% else %}
+                <div class="card-excerpt automatic hidden" id="the-text">
+                  {{ post.excerpt }}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+
+        {% else %}
+          <div class="article-card card-no-img" onclick="location.href = '{{ post.url }}';">
+            <div class="card-header">
+              <span class="card-date">{{ post.date | date_to_string }}</span>
+              <span class="card-title">{{ post.title }}</span>
+            </div>
+            {% if post.abstract %}
+              <div class="card-excerpt defined">
+                {{ post.abstract }}
+              </div>
+            {% else %}
+              <div class="card-excerpt automatic">
+                {{ post.excerpt }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
       {% endfor %}
-    </ul>
+    </div>
+
+
+    <div class="sidebar right"></div>
   </div>
-  <div class="sidebar right"></div>
+  <div class="goUp">
+    <a href="#list-start"><i class="fas fa-chevron-circle-up fa-2x"></i></a>
+  </div>
+
 </div>
