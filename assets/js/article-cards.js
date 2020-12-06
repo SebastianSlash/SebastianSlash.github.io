@@ -1,85 +1,86 @@
-function check_for_card_and_height(parent_node) {
-    parent_node.classList.forEach(element_cls => {
-      if (element_cls == "article-card") {
-        return parent_node.offsetHeight;
-      } else {
-        return check_for_card_and_height(parent_node.parentElement);
-      };
-  })
-}
-
-
-function check_for_card_and_height2(parent_node) {
-  var is_article_card = false
-  var k;
-  for (k = 0; k < parent_node.classList.length; k++) {
-    if (parent_node.classList[k] == "article-card") {
-      is_article_card = true;
+function get_card_height(element) { // padding already substracted
+  var feat_img = false;
+  element.classList.forEach(cls => {
+    if (cls == "hidden") {
+      feat_img = true;
     }
-  }
-  if (is_article_card) {
-    return parent_node.offsetHeight;
+  });
+  if (feat_img) {
+    var card_style = window.getComputedStyle(element.parentElement.parentElement);
+    var overlay_style = window.getComputedStyle(element.parentElement);
+    return parseFloat(card_style.getPropertyValue('height')) - parseFloat(overlay_style.getPropertyValue('padding-top'));
   } else {
-    return check_for_card_and_height(parent_node.parentElement);
+    var card_style = window.getComputedStyle(element.parentElement);
+    return parseFloat(card_style.getPropertyValue('height')) - parseFloat(card_style.getPropertyValue('padding-top'));
   }
-
 }
 
-// function truncate_excerpt(excerpt) {
-//   console.log('parent height:')
-//   console.log(check_for_card_and_height2(excerpt));
-// }
+function get_header_height(element) {
+  var header_style = window.getComputedStyle(element.previousElementSibling);
+  return parseFloat(header_style.getPropertyValue('height'));
+}
 
-function truncate_excerpt(text_div) {
-  var text_div_style = window.getComputedStyle(text_div);
-  var card_header = text_div.previousElementSibling;
-  var card_header_style = window.getComputedStyle(card_header);
-  var exP = text_div.firstElementChild;
-  exP.style.padding = 0;
-  var ex_styles = window.getComputedStyle(exP);
-  var lh = parseFloat(ex_styles.getPropertyValue('line-height'));
-  console.log(lh)
+function get_line_height(element) {
+  var p_style = window.getComputedStyle(element.firstElementChild);
+  return parseFloat(p_style.getPropertyValue('line-height'));
+}
 
+function get_br_height(element) {
   var br_count = 0;
-  var chl = (exP.childNodes.length - 1); //ignore if br is at end of p
+  var child_nodes = (element.firstElementChild.childNodes.length - 1); //ignore if br is at end of p
   var i;
-  for (i = 0; i < chl; i++) {
-    if (exP.childNodes[i].localName == 'br') {
+  for (i = 0; i < child_nodes; i++) {
+    if (element.firstElementChild.childNodes[i].localName == 'br') {
       br_count++;
-      var br_child = exP.childNodes[i];
+      var br_child = element.firstElementChild.childNodes[i];
     }
   }
-  console.log(br_count)
-  if (br_style) {
+  if (br_count > 0) {
     var br_style = window.getComputedStyle(br_child);
-    var br_h = parseFloat(br_style.getPropertyValue('margin-top'));
+    var br_margin = parseFloat(br_style.getPropertyValue('margin-top'));
   } else {
-    br_h = 0;
+    var br_margin = 0;
   }
 
-  var pp_h = check_for_card_and_height2(text_div)  // does not work (returns undefined)
-  console.log('pp_h:')
-  console.log(pp_h)
-  //var p_h = 250 // bad because hardcoded, but works
-  var p_h = parseFloat(text_div_style.getPropertyValue('height'));
-  //var p_h = 250 - parseFloat(card_header_style.getPropertyValue('height'));
-  console.log(p_h)
-  //var top_offset = exP.offsetTop;
-  //console.log(top_offset)
-
-  var padding_of_div = parseFloat(text_div_style.getPropertyValue('padding-top'));
-
-  var p_h_usable = (p_h - padding_of_div - lh) * 1.2; // x1.2 because we use transform: scale(1.2)
-  var p_h_nobr = p_h_usable - (br_h * br_count);
-  var max_l = parseInt(p_h_nobr / lh);
-  console.log(max_l)
-  text_div.style.height = String(p_h_usable) + "px"
-
-  var module = text_div;
-  $clamp(module, {clamp: max_l});
+  return br_count * br_margin;
 }
 
-check_backdrop('.excerpt-overlay')
+function get_excerpt_padding(element) {
+  var excerpt_style = window.getComputedStyle(element);
+  return parseFloat(excerpt_style.getPropertyValue('padding-top'));
+}
+
+function calc_excerpt_height(card_height, header_height, line_height, excerpt_padding) {
+  return card_height - header_height - excerpt_padding - line_height;
+}
+
+function calc_max_lines(excerpt_height, br_height, line_height) {
+  var text_height = excerpt_height - br_height;
+  return parseInt(text_height / line_height);
+}
+
+function calc_div_height(excerpt_padding, br_height, line_height, max_lines) {
+  return (line_height * max_lines) + br_height + excerpt_padding;
+}
+
+function truncate_excerpt(element) {
+  var card_height = get_card_height(element);
+  var header_height = get_header_height(element);
+  var line_height = get_line_height(element);
+  var excerpt_padding = get_excerpt_padding(element);
+  var br_height = get_br_height(element);
+  var excerpt_height = calc_excerpt_height(card_height, header_height, line_height, excerpt_padding);
+  var max_lines = calc_max_lines(excerpt_height, br_height, line_height);
+  var div_height = calc_div_height(excerpt_padding, br_height, line_height, max_lines);
+  console.log('br height:');
+  console.log(br_height);
+
+  element.style.height = String(div_height) + "px";
+  var module = element;
+  $clamp(module, {clamp: max_lines});
+}
+
+// check_backdrop('.excerpt-overlay') // disabled because it seems to blur everything, not just background
 
 const excerpts = document.querySelectorAll(".card-excerpt");
 
