@@ -26,7 +26,7 @@ class: blog
         <ul class="share-links">
           <li class="social-share-icon"><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsebastianbellitto.com{{ page.url | url_encode }}" target="blank"><i class="fab fa-linkedin fa-lg"></i></a></li>
           <li class="social-share-icon"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsebastianbellitto.com{{ page.url | url_encode }}" target="blank"><i class="fab fa-facebook fa-lg"></i></a></li>
-          <li class="social-share-icon"><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsebastianbellitto.com{{ page.url | url_encode }}&text={{ page.title | url_encode}}{% if page.tags %}{{ page.tags | url_encode }}{% endif %}" target="blank"><i class="fab fa-twitter fa-lg"></i></a></li>
+          <li class="social-share-icon"><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsebastianbellitto.com{{ page.url | url_encode }}&text={{ page.title | url_encode}}{% if page.tags %}&hashtags={{ page.tags | url_encode }}{% endif %}" target="blank"><i class="fab fa-twitter fa-lg"></i></a></li>
           <li class="social-share-icon"><a href="http://www.reddit.com/submit?url=https%3A%2F%2Fsebastianbellitto.com{{ page.url | url_encode }}&title={{ page.title | url_encode}}" target="blank"><i class="fab fa-reddit fa-lg"></i></a></li>
         </ul>
       </div>
