@@ -16,8 +16,8 @@ sections:
       - name: Tech Blog
         link: /blogtype/tech
       # - name: Podcast
-      #   link: /pages/podcast
+      #   link: /podcast
       - name: Impossible List
         link: /impossible-list
       # - name: Projects
-      #   link: /pages/projects
+      #   link: /projects
