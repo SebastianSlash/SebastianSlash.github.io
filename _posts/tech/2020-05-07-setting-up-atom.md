@@ -11,12 +11,12 @@ I will list all settings that I change and packages and themes I use.
 Packages wil be listed in different use case categories.
 
 Table of contents:
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=true} -->
 <!-- code_chunk_output -->
 
-- [Settings](#settings)
-- [Themes](#themes)
-- [Packages](#packages)
+1. [Settings](#settings)
+2. [Themes](#themes)
+3. [Packages](#packages)
 
 <!-- /code_chunk_output -->
 
