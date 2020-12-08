@@ -6,15 +6,29 @@ class: impossible
 <div class="wrapper impossible">
   <div class="sidebar left"></div>
   <div class="impossible content">
-    <!-- <ul class="fa-ul">
-      <li><span class="fa-li"><i class="fas fa-check-square"></i></span>List icons can</li>
-      <li><span class="fa-li"><i class="fas fa-check-square"></i></span>be used to</li>
-      <li><span class="fa-li"><i class="fas fa-spinner fa-pulse"></i></span>replace bullets</li>
-      <li><span class="fa-li"><i class="far fa-square"></i></span>in lists</li>
-    </ul> -->
-    <h1>The <span class="crossed">Impossible</span> List</h1>
+
+    <h1>The <span class="crossed" id="impossible-start">Impossible</span> List</h1>
+    <div class="impossible-description">
+      <div class="sidebar left"></div>
+      <p>
+        It's a bit like a bucket list, but not quite.
+        I got inspired to create my own list by Thomas Frank from <a href="https://collegeinfogeek.com" class="special-link">College Info Geek</a>.
+        The Person to originally come up with the concept though is Joel Runyon.
+        He has a nice article explaining <a href="https://impossiblehq.com/the-impossible-list-is-not-a-bucket-list/" class="special-link">the difference</a> between a bucket list and The Impossible List.
+      </p>
+      <h2>It basically works like this:</h2>
+      <ul>
+        <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked"></input>You set actually achievable and big goals, usually in categories</li>
+        <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked"></input>As you achieve them, you tick them off</li>
+        <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked"></input>then they <b>evolve</b>, meaning:<br>
+          You set a new goal expanding on the achieved one.</li>
+      </ul>
+      <div class="sidebar right"></div>
+    </div>
 
     <div class="impossible-section">
+      <p><br></p>
+      <h1>Here is my list:</h1>
       <h2>Current Focus</h2>
       <ul class="fa-ul">
         {% for section in site.data.impossible_list.sections %}
@@ -95,4 +109,7 @@ class: impossible
     {% endfor %}
   </div>
   <div class="sidebar right"></div>
+  <div class="goUp">
+    <a href="#impossible-start"><i class="fas fa-chevron-circle-up fa-2x"></i></a>
+  </div>
 </div>

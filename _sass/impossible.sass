@@ -1,6 +1,8 @@
 .wrapper.impossible
   display: flex
+  flex-direction: column
   justify-content: center
+  align-items: center
 
 .impossible.content
   padding: 20px 30px 20px 30px
@@ -18,6 +20,33 @@
   text-decoration: line-through
   text-decoration-color: rgba(128, 0, 128, 0.6)
   text-decoration-thickness: 4px
+
+.impossible-description
+  display: grid
+  grid-template-columns: minmax(15px, auto) minmax(10px, 650px) minmax(15px, auto)
+  grid-template-rows: auto
+
+  .sidebar.left
+    grid-column: 1 / 2
+  .sidebar.right
+    grid-column: 3 / 4
+  .sidebar
+    grid-row: 1 / -1
+    width: auto
+
+  h1,
+  h2,
+  h3,
+  h4,
+  a,
+  p,
+  br,
+  ol,
+  ul,
+  li
+    grid-column: 2 / 3
+  li
+    padding-bottom: 0.5em
 
 .impossible-section
   @extend %fa-icon
