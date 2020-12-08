@@ -5,7 +5,7 @@ title: "How I set up Atom code editor"
 date: 2020-05-07
 author: Sebastian Bellitto
 ---
-I use Atom as my main text editor, whether it be for programming web pages, python applications, or writing LaTeX documents and note taking.
+I use [Atom](https://atom.io) as my main text editor, whether it be for programming web pages, python applications, or writing LaTeX documents and note taking.
 Here I will list all settings that I change and packages and themes I use.
 
 Packages will be listed in different use case categories.
