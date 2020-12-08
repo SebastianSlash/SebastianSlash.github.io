@@ -6,11 +6,11 @@ date: 2020-05-07
 author: Sebastian Bellitto
 ---
 I use Atom as my main text editor, whether it be for programming web pages, python applications, or writing LaTeX documents and note taking.
-I will list all settings that I change and packages and themes I use.
+Here I will list all settings that I change and packages and themes I use.
 
 Packages wil be listed in different use case categories.
 
-Table of contents:
+Table of contents
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=true} -->
 <!-- code_chunk_output -->
 
