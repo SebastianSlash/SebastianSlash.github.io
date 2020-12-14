@@ -12,8 +12,8 @@ galleries:
     - { url: 'settings.png', alt: 'settings for plantuml-preview'}
 ---
 [PlantUML](https://plantuml.com) is a nice tool to create UML diagrams in a markup style way.<br>
-In this guide I'll show you how to it up for Atom on Windows, whereas the steps are quite similar on Linux or Mac.
-I think it's a powerful tool that lets you draw your diagrams quickly without having to think about to put all the bits on your canvas.
+In this guide I'll show you how to set it up for Atom on Windows, whereas the steps are quite similar on Linux or Mac.
+I think it's a powerful tool that lets you draw your diagrams quickly.
 
 ## Table of Contents
 1. [What's PlantUML?](#whats-plantuml)
@@ -22,16 +22,16 @@ I think it's a powerful tool that lets you draw your diagrams quickly without ha
 4. [Resources](#resources)
 
 ## What's PlantUML?
-PlantUML helps to quickly easily create UML diagrams using simple and intuitive language.
+PlantUML helps to quickly and easily create UML diagrams using simple and intuitive language.
 It is opensource and free.
-A makrup like description of the diagram can be converted to a graphical diagram as shown below
+A markup like description of the diagram can be converted to a graphical diagram as shown below
 
 {% include post-gallery.html gallery=1 %}<br>
 
 ## Requirements
 To create and view your UML diagrams in Atom you first need to install a few things:
 
-(for Linux and Mac just check how to install Graphviz and Java Runtime Enivronment, the plantUML jar is the same for every plattform)
+(*for Linux and Mac* just check how to install Graphviz and Java Runtime Enivronment, the plantUML jar is the same for every plattform)
 ### plantUML jar
 The jar file can be downloaded [here](http://sourceforge.net/projects/plantuml/files/plantuml.jar/download).
 Then you just have to save it to a place of your liking, I've saved it to my users folder.
