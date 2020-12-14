@@ -10,16 +10,10 @@ Here I will list all settings that I change and packages and themes I use.
 
 Packages will be listed in different use case categories.
 
-Table of contents
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=true} -->
-<!-- code_chunk_output -->
-
+## Table of contents
 1. [Settings](#settings)
 2. [Themes](#themes)
 3. [Packages](#packages)
-
-<!-- /code_chunk_output -->
-
 
 # Settings
 
@@ -58,3 +52,8 @@ For Markdown
 For LaTeX:
   - [language-latex](https://atom.io/packages/language-latex)
   - [latex]()
+
+For UML with plantUML:
+  - check out [this post](https://sebastianbellitto.com/blog/2020/12/14/setting-up-plantuml-with-atom) for more information
+  - [language-plantuml](https://atom.io/packages/language-plantuml)
+  - [plantuml-preview](https://atom.io/packages/language-plantuml)
