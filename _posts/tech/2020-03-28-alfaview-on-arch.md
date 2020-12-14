@@ -3,6 +3,7 @@ layout: post
 blogtype: tech
 title: "Installing Alfaview on Arch Linux"
 date: 2020-03-28
+last_updated: 2020-07-09
 author: Sebastian Bellitto
 ---
 Since the whole Corona-Virus self isolation and such, many schools and universities have

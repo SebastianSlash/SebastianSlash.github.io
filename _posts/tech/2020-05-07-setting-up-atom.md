@@ -3,6 +3,7 @@ layout: post
 blogtype: tech
 title: "How I set up Atom code editor"
 date: 2020-05-07
+last_updated: 2020-12-14
 author: Sebastian Bellitto
 ---
 I use [Atom](https://atom.io) as my main text editor, whether it be for programming web pages, python applications, or writing LaTeX documents and note taking.
