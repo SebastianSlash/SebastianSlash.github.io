@@ -1,13 +1,51 @@
 .wrapper.privacy
-  display: flex
-  justify-content: center
+  // display: flex
+  // justify-content: center
+
+  display: grid
+  // grid-template-columns: 1fr
+  grid-template-rows: minmax(80px, auto) repeat(2, auto)
+  grid-template-areas: "feat feat feat" "sl post sr" "up up up"
+  grid-template-columns: minmax(15px, auto) minmax(10px, 850px) minmax(15px, auto)
+
+  h1,
+  h2,
+  h3,
+  h4,
+  a,
+  p,
+  br,
+  ol,
+  ul,
+  li,
+  code,
+  span,
+  div[class^="language"], div[class*=" language"],
+  div[class*="highlight"],
+  div.article-list,
+  div.social-share
+    grid-area: post
+  .sidebar.left
+    grid-area: sl
+  .sidebar.right
+    grid-area: sr
+  .sidebar
+    grid-row: 1 / -1
+    width: auto
 
 .privacy.content
+  grid-area: post
+  // display: grid
+  //
+  // grid-template-rows: auto
+
+
+
   margin: 80px 30px 20px 30px
-  flex-basis: 671px
-  flex-shrink: 1
-  flex-grow: 1
-  max-width: 850px
+  // flex-basis: 671px
+  // flex-shrink: 1
+  // flex-grow: 1
+  // max-width: 850px
 
   h1
     text-align: center

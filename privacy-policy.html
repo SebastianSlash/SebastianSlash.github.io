@@ -7,7 +7,7 @@ last-updated: 2020-12-02
 <div class="wrapper privacy">
   <div class="sidebar left"></div>
   <div class="privacy content">
-    <h1>Privacy Notice</h1>
+    <h1 id="Privacy-Notice-H1">Privacy Notice</h1>
     <p class="last-updated">Last updated {{ page.last-updated | date: "%B %d, %Y" }}</p>
     <div class="privacy introduction">
       {% for item in site.data.privacyNotice.intro %}
@@ -56,4 +56,7 @@ last-updated: 2020-12-02
     </div>
   </div>
   <div class="sidebar right"></div>
+  <div class="goUp">
+    <a href="#Privacy-Notice-H1"><i class="fas fa-chevron-circle-up fa-2x"></i></a>
+  </div>
 </div>
