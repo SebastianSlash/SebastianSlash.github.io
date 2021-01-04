@@ -24,17 +24,17 @@ sections:
         completion_date:
         link:
       - name: Properly code my personal web page
-        working_on: True
-        completed: False
+        working_on: False
+        completed: True
         sequel: False
         subcategory: False
-        completion_date:
-        link:
+        completion_date: 2020-12-07
+        link: /
 
   - title: Cycling
     list_items:
       - name: Cycle 7000 km in 2021
-        working_on: False
+        working_on: True
         completed: False
         sequel: False # better to show the next step at the end/after 2021
         subcategory: False
