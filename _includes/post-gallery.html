@@ -1,13 +1,34 @@
-{% assign images = page.galleries[include.gallery] %}
+{% assign gallery = page.galleries[include.gallery] %}
 
 <div class="post-gallery">
 
-  {% assign class_no = 1 %}
 
-  {% for img in images %}
-      <img class="{{ "imgal_" | append: class_no }}" src="{{ page.img-dir }}{{ img.url }}" alt="{{ img.alt }}" loading="lazy">
-      {% assign class_no = class_no | plus: 1 %}
-
+  {% for part in gallery.parts %}
+    {% assign img_no = 1 %}
+    <div class="gallery {{ part.layout }}">
+      {% if part.layout == "left-portrait" %}
+        <div class="portrait">
+          <img class="img_1" src="{{ page.img-dir }}{{ part.images[0].url }}" alt="{{ part.images[0].alt }}" loading="lazy">
+        </div>
+        <div class="stacked">
+          <img class="img_2" src="{{ page.img-dir }}{{ part.images[1].url }}" alt="{{ part.images[1].alt }}" loading="lazy">
+          <img class="img_3" src="{{ page.img-dir }}{{ part.images[2].url }}" alt="{{ part.images[2].alt }}" loading="lazy">
+        </div>
+      {% elsif part.layout == "right-portrait" %}
+        <div class="stacked">
+          <img class="img_1" src="{{ page.img-dir }}{{ part.images[0].url }}" alt="{{ part.images[0].alt }}" loading="lazy">
+          <img class="img_2" src="{{ page.img-dir }}{{ part.images[1].url }}" alt="{{ part.images[1].alt }}" loading="lazy">
+        </div>
+        <div class="portrait">
+          <img class="img_3" src="{{ page.img-dir }}{{ part.images[2].url }}" alt="{{ part.images[2].alt }}" loading="lazy">
+        </div>
+      {% else %}
+        {% for img in part.images %}
+            <img class="{{ "img_" | append: img_no }}" src="{{ page.img-dir }}{{ img.url }}" alt="{{ img.alt }}" loading="lazy">
+            {% assign img_no = img_no | plus: 1 %}
+        {% endfor %}
+      {% endif %}
+    </div>
   {% endfor %}
 
 </div>
