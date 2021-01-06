@@ -35,12 +35,12 @@ galleries:
     parts:
       - layout: landscape
         images:
-          - { url: 'orbit360bw_12.jpg', alt: 'boooh'}
+          - { url: 'orbit360bw_14.jpg', alt: 'boooh'}
       - layout: equal
         images:
-          - { url: 'orbit360bw_11.jpg', alt: 'boooh'}
+          - { url: 'orbit360bw_12.jpg', alt: 'boooh'}
           - { url: 'orbit360bw_13.jpg', alt: 'boooh'}
-          - { url: 'orbit360bw_14.jpg', alt: 'boooh'}
+          - { url: 'orbit360bw_11.jpg', alt: 'boooh'}
           - { url: 'orbit360bw_15.jpg', alt: 'boooh'}
           - { url: 'orbit360bw_16.jpg', alt: 'boooh'}
           - { url: 'orbit360bw_17.jpg', alt: 'boooh'}

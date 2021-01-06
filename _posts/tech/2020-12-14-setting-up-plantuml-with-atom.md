@@ -7,9 +7,15 @@ author: Sebastian Bellitto
 img-dir: /assets/images/posts/2020-12-14-setting-up-plantuml-with-atom/
 galleries:
   1:
-    - { url: 'example.png', alt: 'example of a sequence diagram with plantUML'}
+    parts:
+      - layout: equal
+        images:
+          - { url: 'example.png', alt: 'example of a sequence diagram with plantUML'}
   2:
-    - { url: 'settings.png', alt: 'settings for plantuml-preview'}
+    parts:
+      - layout: equal
+        images:
+          - { url: 'settings.png', alt: 'settings for plantuml-preview'}
 ---
 [PlantUML](https://plantuml.com) is a nice tool to create UML diagrams in a markup style way.<br>
 In this guide I'll show you how to set it up for Atom on Windows, whereas the steps are quite similar on Linux or Mac.
