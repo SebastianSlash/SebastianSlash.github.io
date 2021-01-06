@@ -253,13 +253,26 @@ p.abstract
 // FEATURED IMAGE
 // ================================================================================================================
 
-.feat-img
+.feat-img-container
   grid-area: feat
+  justify-self: center
   position: fixed
   z-index: -1
-  height: 400px
-  width: 100vw
+  height: 50vw
+  width: 70vw
   overflow: hidden
+  top: 0px
+  transform: skew(170deg)
+  display: flex
+  align-content: center
+.feat-img
+  position: absolute
+  // margin-top: auto
+  // margin-bottom: auto
+  object-fit: cover
+  transform: skew(10deg)
+  width: 124.8%
+  margin-left: -12.4%
 
 .feat-img-spacer
   grid-area: feat
