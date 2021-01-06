@@ -9,25 +9,41 @@ featured-image-alt: View across the Black Forest to Strasbourg, Orbit360 Baden-W
 img-dir: /assets/images/posts/2020-07-21-riding-the-orbit360-BW/
 galleries:
   1:
-    - {url: 'bike_bags.jpg', alt: 'bike with bags'}
-    - {url: 'bottles.jpg', alt: 'bottles on bike'}
+    parts:
+      - layout: equal
+        images:
+          - {url: 'bike_bags.jpg', alt: 'bike with bags'}
+          - {url: 'bottles.jpg', alt: 'bottles on bike'}
   2:
-    - { url: 'orbit360bw_01.jpg', alt: 'boooh'}
-    - { url: 'orbit360bw_03.jpg', alt: 'boooh'}
-    - { url: 'orbit360bw_04.jpg', alt: 'boooh'}
+    parts:
+      - layout: right-portrait
+        images:
+          - { url: 'orbit360bw_01.jpg', alt: 'boooh'}
+          - { url: 'orbit360bw_04.jpg', alt: 'boooh'}
+          - { url: 'orbit360bw_03.jpg', alt: 'boooh'}
   3:
-    - { url: 'orbit360bw_05.jpg', alt: 'boooh'}
-    - { url: 'orbit360bw_07.jpg', alt: 'boooh'}
-    - { url: 'orbit360bw_09.jpg', alt: 'boooh'}
-    - { url: 'orbit360bw_10.jpg', alt: 'boooh'}
+    parts:
+      - layout: left-portrait
+        images:
+          - { url: 'orbit360bw_09.jpg', alt: 'boooh'}
+          - { url: 'orbit360bw_05.jpg', alt: 'boooh'}
+          - { url: 'orbit360bw_07.jpg', alt: 'boooh'}
+      - layout: landscape
+        images:
+          - { url: 'orbit360bw_10.jpg', alt: 'boooh'}
   4:
-    - { url: 'orbit360bw_12.jpg', alt: 'boooh'}
-    - { url: 'orbit360bw_11.jpg', alt: 'boooh'}
-    - { url: 'orbit360bw_13.jpg', alt: 'boooh'}
-    - { url: 'orbit360bw_14.jpg', alt: 'boooh'}
-    - { url: 'orbit360bw_15.jpg', alt: 'boooh'}
-    - { url: 'orbit360bw_16.jpg', alt: 'boooh'}
-    - { url: 'orbit360bw_17.jpg', alt: 'boooh'}
+    parts:
+      - layout: landscape
+        images:
+          - { url: 'orbit360bw_14.jpg', alt: 'boooh'}
+      - layout: equal
+        images:
+          - { url: 'orbit360bw_12.jpg', alt: 'boooh'}
+          - { url: 'orbit360bw_13.jpg', alt: 'boooh'}
+          - { url: 'orbit360bw_11.jpg', alt: 'boooh'}
+          - { url: 'orbit360bw_15.jpg', alt: 'boooh'}
+          - { url: 'orbit360bw_16.jpg', alt: 'boooh'}
+          - { url: 'orbit360bw_17.jpg', alt: 'boooh'}
 ---
 On Friday the 17th of July I set out to ride the Baden-Württemberg route from the [Orbit 360](https://orbit360.cc) Gravel series.<br>
 It is a course of 250 km and 4000 m of climbing. The longest ride I had done so far was 170 km in the flats and the most comparable 162 km with 2300 m of climbing. So I was really excited and interested in seeing how I would fare. This year I was also lagging behind in training and I think this was the cause of something I will talk about later in this article.<br>
