@@ -34,4 +34,4 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 gem "eventmachine", "~> 1.0.0"
 
 # fixing kramdown security vunerability
-gem "kramdown", ">=2.3.0"
+gem "kramdown", ">=2.3.1"
