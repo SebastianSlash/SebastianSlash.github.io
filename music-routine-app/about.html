@@ -1,0 +1,82 @@
+---
+layout: default
+title: Music Routine
+class: music-routine
+last-update: 2020-04-08
+app-version: alpha v1.0.0
+---
+<div class="wrapper musicapp">
+  <div class="sidebar left"></div>
+  <div class="musicapp content">
+    <h1>Music Routine App</h1>
+    <p>
+      Recently I've started to develop an app which is intended as a practicing tool for musicians.
+      The Idea is to have an app where you create exercises, like scales, and also be able to incoperate them in practice routines.
+    </p>
+    <p>Wheather you play the Piano, Guitar or Saxophone this app can be used for any instrument.</p>
+
+    <p>
+      Currently the app is a very minimal working example showcasing the basic idea behind it.
+    </p>
+    <p>
+      Please give me lots of feedback.
+    </p>
+    <div class="form-provider">
+      <div class="cta-button feedback" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeI5XzLX6tXOL1uLaAMY43DdZc7wmj8QIL1EtVyTP8gGvkmTg/viewform?usp=sf_link');">
+        <span>give feedback</span>
+      </div>
+      <div class="cta-button bug-report" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeL2aTFyObLZKAgQMQqpPgWDvZ_a8Wpb_ZbLZE1h9OFuSbdSQ/viewform?usp=sf_link');">
+        <span>file bug report</span>
+      </div>
+    </div>
+
+
+
+
+    <p>
+      If you want to test the app before the offical open test release you can become part of the internal test group.
+      When you're part of the test group you help my developement process by providing valuable and needed feedback, reporting bugs and usability issuses.
+    </p>
+
+    <div class="button-wrapper">
+      <div class="cta-button test-access" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScRZXH1-FbYpfZmteY9vNa0M1FPL_2jO7C8XY3shoWA5eHiJA/viewform?usp=sf_link');">
+        <span>request internal test access</span>
+      </div>
+    </div>
+
+    <h2>Current Status as of {{ page.last-update | date: "%B %d, %Y" }}</h2>
+    <p class="post-meta">app version {{ page.app-version}}</p>
+    <ul class="release-notes">
+      <li>It's super buggy and the Metronome is kinda not playing in time (useless)</li>
+      <li>The metronome inside the exercises will not play any sound! (yet)</li>
+      <li>you can create and list exercises</li>
+      <li>you can start an exercise and practice it</li>
+      <li>you can use a simple metronome</li>
+      <li>exercise are comprised of one or more Intervals</li>
+      <li>each exercise internal can have a timer, metronome or both</li>
+    </ul>
+    <h2>Features</h2>
+    <p>
+      Create exercises you use to practice an instrument.
+      Exercises can vary in complexity and are comprised of at least one interval.
+    </p>
+    <p>
+      An interval describes what you have to do for that part of the exercise, it can have a metronome and/or a timer.
+    </p>
+    <p>
+      When you practice your exercise you will see the interval desrciption a metronome indicator and timer indicator if applicable.
+      After a exercise is done you will be asked for feedback to (in the future) adapt your exercise to your current level.
+    </p>
+    <p>
+      The app also includes a plain metronome that can be used without any exercises.
+    </p>
+
+    <!-- <ul class="social">
+      <li><a href="https://www.linkedin.com/in/sebastian-bellitto-08227312a/" class="social-icon" target="blank"> <i class="fab fa-linkedin fa-2x"></i></a></li>
+      <li><a href="https://github.com/SebastianSlash" class="social-icon" target="blank"> <i class="fab fa-github fa-2x"></i></a></li>
+      <li><a href="https://www.instagram.com/sebastian_bellitto/" class="social-icon" target="blank"> <i class="fab fa-instagram fa-2x"></i></a></li>
+    </ul> -->
+
+  </div>
+  <div class="sidebar right"></div>
+</div>

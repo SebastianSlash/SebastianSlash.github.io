@@ -21,3 +21,11 @@ sections:
         link: /impossible-list
       # - name: Projects
       #   link: /projects
+  - title: Music Routine App
+    map_items:
+      - name: About
+        link: /music-routine-app/about
+      # - name: Feedback
+      #   link: /
+      - name: Privacy Policy
+        link: /music-routine-app/privacy-policy
