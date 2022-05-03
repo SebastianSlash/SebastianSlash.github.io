@@ -10,11 +10,11 @@ sections:
   - title: Professional
     list_items:
       - name: Bachelor degree in Medical Enigneering
-        working_on: True
-        completed: False
+        working_on: False
+        completed: True
         sequel: False
         subcategory: False
-        completion_date:
+        completion_date: 2021-11-13
         link:
       - name: Start a Podcast
         working_on: False
@@ -34,7 +34,7 @@ sections:
   - title: Cycling
     list_items:
       - name: Cycle 7000 km in 2021
-        working_on: True
+        working_on: False
         completed: False
         sequel: False # better to show the next step at the end/after 2021
         subcategory: False
