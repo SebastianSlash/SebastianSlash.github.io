@@ -1,4 +1,8 @@
-name: Sebastian Bellitto
+title: Sebastian Bellitto
+author: Sebastian Bellitto
+description: "I'm a software engineer focused on building modular, extensible
+  and well documented test solutions used in international development environments."
+url: "https://sebastianbellitto.com"
 markdown: kramdown
 # highlighter: coderay
 permalink: /blog/:year/:month/:day/:title
