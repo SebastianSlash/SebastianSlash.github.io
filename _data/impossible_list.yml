@@ -30,27 +30,16 @@ sections:
         subcategory: False
         completion_date: 2020-12-07
         link: /
-
-  - title: Cycling
-    list_items:
-      - name: Cycle 7000 km in 2021
-        working_on: False
+      - name: Find a (developer) job in Oulu Finland
+        working_on: True
         completed: False
-        sequel: False # better to show the next step at the end/after 2021
+        sequel: False
         subcategory: False
         completion_date:
         link:
-        # list_next:
-        #   - name: Cycle 8000 km in 2022
-        #     working_on: False
-        #     completed: False
-        #     completion_date:
-        #     link:
-        #   - name: Cycle 9000 km in 2023
-        #     working_on: False
-        #     completed: False
-        #     completion_date:
-        #     link:
+
+  - title: Cycling
+    list_items:
       - name: Participate in a ultra endurance race
         working_on: False
         completed: True
@@ -88,6 +77,13 @@ sections:
         link:
   - title: Language
     list_items:
+      - name: Learn basic Finnish
+        working_on: True
+        completed: False
+        sequel: False
+        subcategory: True
+        completion_date:
+        link:
       - name: Learn Japanese
         working_on: False
         completed: False
@@ -148,10 +144,11 @@ sections:
             completion_date:
             link:
           - name: Get a C1 certificate
-            working_on: True
+            working_on: False
             completed: False
             completion_date:
             link:
+
       # - name: English
       #   working_on: False
       #   completed: False
