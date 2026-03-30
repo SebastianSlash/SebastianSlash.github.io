@@ -117,7 +117,7 @@ sections:
             completed: False
             completion_date:
             link:
-      - name: Learn Portogese
+      - name: Learn Portuguese
         working_on: False
         completed: False
         sequel: True
@@ -125,7 +125,7 @@ sections:
         completion_date:
         link:
         list_next:
-          - name: Get through part 1 of Porgugese For Dummies
+          - name: Get through part 1 of Portuguese For Dummies
             working_on: False
             completed: False
             completion_date:
